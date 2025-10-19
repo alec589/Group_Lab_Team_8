@@ -4,10 +4,8 @@
  */
 package info5100.university.example;
 
-import UIRegistrar.RegistrarWorkArea;
-import UIadmin.AdmainWorkArea;
-import UIfaculty.FacultyWorkArea;
-import UIstudent.StudentWorkArea;
+
+
 import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Profile;
@@ -15,6 +13,10 @@ import info5100.university.example.Persona.RegistrarProfile;
 import info5100.university.example.Persona.StudentProfile;
 import info5100.university.example.Persona.UserAccount;
 import info5100.university.example.Persona.UserAccountDirectory;
+import info5100.university.example.UIRegistrar.RegistrarWorkArea;
+import info5100.university.example.UIadmin.AdmainWorkArea;
+import info5100.university.example.UIfaculty.FacultyWorkArea;
+import info5100.university.example.UIstudent.StudentWorkArea;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -122,6 +124,7 @@ Business business;
         AdmainWorkArea admainworkarea;
         StudentWorkArea studentworkarea;
         FacultyWorkArea facultyworkarea;
+        RegistrarWorkArea registarworkarea;
         String r = ua.getRole();
         Profile profile= ua.getAssociatedPersonProfile();
         if (profile instanceof StudentProfile) {

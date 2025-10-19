@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UIRegistrar;
+package info5100.university.example.UIRegistrar;
 
 import info5100.university.example.Business;
 import javax.swing.JPanel;
