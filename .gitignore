@@ -1,39 +1,40 @@
-# ===============================================
-# Git Ignore Template for macOS / Java / NetBeans
-# ===============================================
+# =========================================================
+# 极致全面的 Git 忽略模板 (macOS / Java / NetBeans / IDEs)
+# =========================================================
 
-# 1. macOS Specific Files (必忽略)
+# 1. macOS 操作系统文件 (OS Files)
 # -----------------------------------------------
-.DS_Store          # Finder settings files
-.AppleDouble       # macOS resource forks files
-.LSOverride        # Per-folder view settings
-._* # Resource fork files (._filename)
-# Thumbnails and Trash files
-ehthumbs.db
+.DS_Store          # Finder 设置和视图文件 (您组员遇到的问题)
+._* # macOS 资源文件 (Resource forks)
+.AppleDouble
+.LSOverride
 Icon
-.Trashes
+ehthumbs.db        # Windows 缩略图缓存 (Windows Thumbnails)
+Thumbs.db
 Code snippet
 
-# 2. NetBeans IDE Files & Configurations (必忽略)
+# 2. NetBeans IDE 文件 (解决您的核心问题)
 # -----------------------------------------------
-# NetBeans private configurations (User-specific settings that must NOT be shared)
+# 核心私有配置 (用户特定，绝不应共享)
 /nbproject/private/
 /nb-private/
+/nbproject/*.log
 
-# Files tracking local user paths or environments (导致您之前冲突的根源)
+# 明确忽略包含用户路径的配置文件 (解决冲突的根源)
 nb-configuration.xml
 nbproject/ide.properties
-/nbproject/*.log
-*user.properties.file* # 明确忽略用户属性文件
-*build.properties* # 明确忽略 build 属性文件
+*user.properties.file*
+*build.properties*
+Code snippet
 
-# 3. Java Compilation and Build Artifacts (必忽略)
+# 3. Java 编译和构建产物 (Build Artifacts)
 # -----------------------------------------------
-# Compiled Class files
+# 编译输出和类文件
 *.class
 *.bak
+*.iws
 
-# Packaging output (JAR, WAR, EAR, ZIP, etc.)
+# 自动生成的打包文件
 *.jar
 *.war
 *.ear
@@ -41,14 +42,16 @@ nbproject/ide.properties
 *.rar
 *.tar
 *.gz
+*.iml            # IntelliJ IDEA 模块文件
 
-# Standard Java Build Directories (Maven, Gradle, Ant)
-/target/     # Maven output directory
-/build/      # Ant/Standard build output directory
-/dist/       # Distribution output directory
-/out/        # IntelliJ or other IDE output directory
+# 标准构建输出目录 (必须忽略)
+/target/         # Maven 输出目录
+/build/          # Ant/标准构建目录
+/dist/           # 分发输出目录
+/out/            # IntelliJ IDEA 输出目录
+Code snippet
 
-# 4. IDE Specific Files (General)
+# 4. 常见 IDE/编辑器文件夹
 # -----------------------------------------------
 # IntelliJ IDEA / Android Studio
 .idea/
@@ -60,12 +63,12 @@ nbproject/ide.properties
 .classpath
 .project
 .settings/
+Code snippet
 
-# 5. Log and Temporary Files
+# 5. 日志、缓存和临时文件 (Logs & Temp)
 # -----------------------------------------------
 *.log
 *.tmp
 temp/
-# Build history
-/history
-/TeamGreeting/nbproject/private/
+/history         # 有些 IDE 或工具生成的历史记录
+/cache/
