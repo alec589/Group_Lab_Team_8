@@ -1,0 +1,71 @@
+# ===============================================
+# Git Ignore Template for macOS / Java / NetBeans
+# ===============================================
+
+# 1. macOS Specific Files (必忽略)
+# -----------------------------------------------
+.DS_Store          # Finder settings files
+.AppleDouble       # macOS resource forks files
+.LSOverride        # Per-folder view settings
+._* # Resource fork files (._filename)
+# Thumbnails and Trash files
+ehthumbs.db
+Icon
+.Trashes
+Code snippet
+
+# 2. NetBeans IDE Files & Configurations (必忽略)
+# -----------------------------------------------
+# NetBeans private configurations (User-specific settings that must NOT be shared)
+/nbproject/private/
+/nb-private/
+
+# Files tracking local user paths or environments (导致您之前冲突的根源)
+nb-configuration.xml
+nbproject/ide.properties
+/nbproject/*.log
+*user.properties.file* # 明确忽略用户属性文件
+*build.properties* # 明确忽略 build 属性文件
+
+# 3. Java Compilation and Build Artifacts (必忽略)
+# -----------------------------------------------
+# Compiled Class files
+*.class
+*.bak
+
+# Packaging output (JAR, WAR, EAR, ZIP, etc.)
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+*.tar
+*.gz
+
+# Standard Java Build Directories (Maven, Gradle, Ant)
+/target/     # Maven output directory
+/build/      # Ant/Standard build output directory
+/dist/       # Distribution output directory
+/out/        # IntelliJ or other IDE output directory
+
+# 4. IDE Specific Files (General)
+# -----------------------------------------------
+# IntelliJ IDEA / Android Studio
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# 5. Log and Temporary Files
+# -----------------------------------------------
+*.log
+*.tmp
+temp/
+# Build history
+/history
+/TeamGreeting/nbproject/private/
