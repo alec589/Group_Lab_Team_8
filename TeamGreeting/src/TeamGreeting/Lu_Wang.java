@@ -9,5 +9,8 @@ package TeamGreeting;
  * @author luwang
  */
 public class Lu_Wang {
-    
+    public static void main(String[] args) {
+        System.out.println("Hello from Lu Wang!");
+    }
+
 }
