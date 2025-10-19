@@ -72,3 +72,4 @@ Code snippet
 temp/
 /history         # 有些 IDE 或工具生成的历史记录
 /cache/
+/TeamGreeting/nbproject/private/
