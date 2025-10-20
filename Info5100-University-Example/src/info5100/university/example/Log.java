@@ -9,11 +9,11 @@ package info5100.university.example;
 import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Profile;
-import info5100.university.example.Persona.RegistrarProfile;
+import info5100.university.example.Persona.RegisterProfile;
 import info5100.university.example.Persona.StudentProfile;
 import info5100.university.example.Persona.UserAccount;
 import info5100.university.example.Persona.UserAccountDirectory;
-import info5100.university.example.UIRegistrar.RegistrarWorkArea;
+import info5100.university.example.UIRegister.RegisterWorkArea;
 import info5100.university.example.UIadmin.AdmainWorkArea;
 import info5100.university.example.UIfaculty.FacultyWorkArea;
 import info5100.university.example.UIstudent.StudentWorkArea;
@@ -124,7 +124,7 @@ Business business;
         AdmainWorkArea admainworkarea;
         StudentWorkArea studentworkarea;
         FacultyWorkArea facultyworkarea;
-        RegistrarWorkArea registarworkarea;
+        RegisterWorkArea registarworkarea;
         String r = ua.getRole();
         Profile profile= ua.getAssociatedPersonProfile();
         if (profile instanceof StudentProfile) {
@@ -151,10 +151,10 @@ Business business;
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
         }
-        if (profile instanceof RegistrarProfile) {
+        if (profile instanceof RegisterProfile) {
 
-            RegistrarWorkArea panel = new RegistrarWorkArea(MainPanel,business);
-            MainPanel.add("RegistrarWorkArea", panel);
+            RegisterWorkArea panel = new RegisterWorkArea(MainPanel,business);
+            MainPanel.add("RegisterWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
         }

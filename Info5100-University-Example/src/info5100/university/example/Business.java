@@ -7,6 +7,7 @@ package info5100.university.example;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.PersonDirectory;
+import info5100.university.example.Persona.RegisterDirectory;//chunyan
 
 import info5100.university.example.Persona.StudentDirectory;
 import info5100.university.example.Persona.UserAccountDirectory;
@@ -19,6 +20,7 @@ public class Business {
     String Name;
     StudentDirectory studentdirectory;
     FacultyDirectory facultydirectory;
+    RegisterDirectory registerdirectory;//chunyan
     UserAccountDirectory useraccountdirectory;
     PersonDirectory persondirectory;
     
@@ -26,6 +28,7 @@ public class Business {
         Name = n ;
         studentdirectory = new StudentDirectory(d);
         facultydirectory = new FacultyDirectory(d);
+        registerdirectory=new RegisterDirectory(d);//chunyan
         useraccountdirectory = new UserAccountDirectory(d);
         persondirectory = new PersonDirectory();
     }
@@ -45,7 +48,9 @@ public class Business {
     public FacultyDirectory getFacultydirectory() {
         return facultydirectory;
     }
-
+    public RegisterDirectory getRegisterdirectory() {//chunyan
+        return registerdirectory;
+    }
     public UserAccountDirectory getUseraccountdirectory() {
         return useraccountdirectory;
     }
