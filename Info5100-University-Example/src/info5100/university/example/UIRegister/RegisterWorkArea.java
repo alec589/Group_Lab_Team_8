@@ -119,47 +119,47 @@ Business business;
 
     private void btnCourseOfferingManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseOfferingManagementActionPerformed
         // TODO add your handling code here:
-        CourseOfferingManagementJPanel comJPanel=new CourseOfferingManagementJPanel( mainpanel, business);
+     /*   CourseOfferingManagementJPanel comJPanel=new CourseOfferingManagementJPanel( mainpanel, business);
         mainpanel.add(" CourseOfferingManagementJPanel",comJPanel);
         
         CardLayout layout = (CardLayout) mainpanel.getLayout();
-            layout.next(mainpanel);
+            layout.next(mainpanel);*/
     }//GEN-LAST:event_btnCourseOfferingManagementActionPerformed
 
     private void btnStudentRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudentRegistrationActionPerformed
         // TODO add your handling code here:
-         StudentRegistrationJPanel srJPanel=new StudentRegistrationJPanel( mainpanel, business);
+       /*  StudentRegistrationJPanel srJPanel=new StudentRegistrationJPanel( mainpanel, business);
         mainpanel.add(" StudentRegistrationJPanel",srJPanel);
         
         CardLayout layout = (CardLayout) mainpanel.getLayout();
-            layout.next(mainpanel);
+            layout.next(mainpanel);*/
     }//GEN-LAST:event_btnStudentRegistrationActionPerformed
 
     private void btnManageProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageProfileActionPerformed
         // TODO add your handling code here:
-        ManageProfileJPanel mpJPanel=new ManageProfileJPanel( mainpanel, business);
+     /*   ManageProfileJPanel mpJPanel=new ManageProfileJPanel( mainpanel, business);
         mainpanel.add(" ManageProfileJPanel",mpJPanel);
         
         CardLayout layout = (CardLayout) mainpanel.getLayout();
-            layout.next(mainpanel);
+            layout.next(mainpanel);*/
     }//GEN-LAST:event_btnManageProfileActionPerformed
 
     private void btnFiancialMonitoringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiancialMonitoringActionPerformed
         // TODO add your handling code here:
-        FinancialMonitoringJPanel fmJPanel=new FinancialMonitoringJPanel( mainpanel, business);
+      /*  FinancialMonitoringJPanel fmJPanel=new FinancialMonitoringJPanel( mainpanel, business);
         mainpanel.add(" FinancialMoitoringJPanel",fmJPanel);
         
         CardLayout layout = (CardLayout) mainpanel.getLayout();
-            layout.next(mainpanel);
+            layout.next(mainpanel);*/
     }//GEN-LAST:event_btnFiancialMonitoringActionPerformed
 
     private void btnAnalyticsReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalyticsReportActionPerformed
         // TODO add your handling code here:
-         AnalyticsReportJPanel arJPanel=new AnalyticsReportJPanel( mainpanel, business);
+       /*  AnalyticsReportJPanel arJPanel=new AnalyticsReportJPanel( mainpanel, business);
         mainpanel.add(" AnalyticsReportJPanel",arJPanel);
         
         CardLayout layout = (CardLayout) mainpanel.getLayout();
-            layout.next(mainpanel);
+            layout.next(mainpanel);*/
     }//GEN-LAST:event_btnAnalyticsReportActionPerformed
 
 
