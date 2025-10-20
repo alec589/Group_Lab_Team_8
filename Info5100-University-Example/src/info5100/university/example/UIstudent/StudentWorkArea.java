@@ -4,7 +4,11 @@
  */
 package info5100.university.example.UIstudent;
 
-import info5100.university.example.Business;
+
+import info5100.university.example.Department.Department;
+import info5100.university.example.Persona.StudentProfile;
+
+import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
@@ -13,14 +17,16 @@ import javax.swing.JPanel;
  */
 public class StudentWorkArea extends javax.swing.JPanel {
 JPanel mainpanel;
-Business business;
+Department department;
+StudentProfile studentprofile;
     /**
      * Creates new form StudentWorkArea
      */
-    public StudentWorkArea(JPanel mainpanel,Business business) {
+    public StudentWorkArea(JPanel mainpanel,Department department,StudentProfile studentprofile) {
         initComponents();
         this.mainpanel=mainpanel;
-        this.business=business;
+        this.department=department;
+        this.studentprofile=studentprofile;
     }
 
     /**
