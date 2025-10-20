@@ -92,22 +92,30 @@ public class ConfigureTheBusiness {
           Calendar calendar = department.getCalendar();
           CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
           CourseOffer fall_course1 = fallSchedule1.newCourseOffer(course1.getCourseNumber());
-          CourseOffer fall_coirse2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
+          fall_course1.generatSeats(30);
+          CourseOffer fall_course2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
+          fall_course2.generatSeats(40);
           calendar.addCourseSchedule("2025fall", fallSchedule1);
           
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
           CourseOffer spring_course1 = springSchedule.newCourseOffer(course3.getCourseNumber());
+          spring_course1.generatSeats(30);
           CourseOffer spring_coirse2 = springSchedule.newCourseOffer(course4.getCourseNumber());
+          spring_course1.generatSeats(30);
           calendar.addCourseSchedule("2026spring", springSchedule);
           
           CourseSchedule summerSchedule = new CourseSchedule("2026summer", coursecatalog);
           CourseOffer summer_course1 = summerSchedule.newCourseOffer(course7.getCourseNumber());
+          summer_course1.generatSeats(30);
           CourseOffer summerg_coirse2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
+          summerg_coirse2.generatSeats(30);
           calendar.addCourseSchedule("2026summer", summerSchedule);
           
           CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);
           CourseOffer winter_course1 = winterSchedule.newCourseOffer(course5.getCourseNumber());
-          CourseOffer winter_coirse2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
+          winter_course1.generatSeats(30);
+          CourseOffer winter_course2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
+          winter_course2.generatSeats(30);
           calendar.addCourseSchedule("2025winter", winterSchedule);
 
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
