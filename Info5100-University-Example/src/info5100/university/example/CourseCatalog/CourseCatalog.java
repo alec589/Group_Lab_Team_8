@@ -25,17 +25,17 @@ public class CourseCatalog {
         return courselist;
     }
     
-    public Course newCourse(String n, String nm, int cr){
-        Course c = new Course(n, nm, cr);
+    public Course newCourse( String nm, int cr){
+        Course c = new Course( nm, cr);
         courselist.add(c);
         return c;
     }
     
-    public Course getCourseByNumber(String n){
+    public Course getCourseByNumber(int n){
         
         for( Course c: courselist){
             
-            if(c.getCourseNumber().equals(n)) return c;
+            if(c.getCourseNumber()==(n)) return c;
         }
         return null;
     }

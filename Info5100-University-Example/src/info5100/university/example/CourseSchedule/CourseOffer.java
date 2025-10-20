@@ -34,7 +34,7 @@ public class CourseOffer {
         return facultyassignment.getFacultyProfile();
     }
 
-    public String getCourseNumber() {
+    public int getCourseNumber() {
         return course.getCourseNumber();
     }
 public String getCourseName() {
@@ -91,5 +91,8 @@ public String getCourseName() {
     public int getCreditHours(){
         return course.getCredits();
     }
-
+public String toString() {
+ 
+    return String.valueOf(course.getCourseNumber());
+}
 }

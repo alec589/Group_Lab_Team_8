@@ -27,7 +27,7 @@ public class CourseSchedule {
 
     }
 
-    public CourseOffer newCourseOffer(String  n) {
+    public CourseOffer newCourseOffer(int  n) {
 
         Course c = coursecatalog.getCourseByNumber(n);
         if(c==null) return null;
@@ -41,11 +41,11 @@ public class CourseSchedule {
         return schedule;
     }
 
-    public CourseOffer getCourseOfferByNumber(String n) {
+    public CourseOffer getCourseOfferByNumber(int n) {
 
         for (CourseOffer co : schedule) {
 
-            if (co.getCourseNumber().equals(n)) {
+            if (co.getCourseNumber()==(n)) {
                 return co;
             }
         }

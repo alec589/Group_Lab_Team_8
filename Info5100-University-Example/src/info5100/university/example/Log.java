@@ -6,6 +6,7 @@ package info5100.university.example;
 
 
 
+import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Profile;
@@ -25,15 +26,15 @@ import javax.swing.JPanel;
  * @author sunzuolin
  */
 public class Log extends javax.swing.JPanel {
-Business business;
+Department department;
   JPanel MainPanel;
     /**
      * Creates new form Log
      */
-    public Log(JPanel MainPanel, Business business) {
+    public Log(JPanel MainPanel, Department department) {
         initComponents();
         this.MainPanel = MainPanel;
-        this.business = ConfigureTheBusiness.initialize();
+        this.department = ConfigureTheBusiness.initialize();
     }
 
     /**
@@ -116,7 +117,7 @@ Business business;
         // TODO add your handling code here:
         String username = txtUserName.getText();
         String userpassword = txtPassword.getText();
-        UserAccountDirectory uad = business.getUseraccountdirectory();
+        UserAccountDirectory uad = department.getUseraccountdirectory();
         UserAccount ua = uad.AuthenticateUser(username, userpassword);
         if (ua == null) {
             return;
@@ -129,7 +130,7 @@ Business business;
         Profile profile= ua.getAssociatedPersonProfile();
         if (profile instanceof StudentProfile) {
 
-            StudentWorkArea panel = new StudentWorkArea(MainPanel,business);
+            StudentWorkArea panel = new StudentWorkArea(MainPanel,department);
 
             MainPanel.add("StudentWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
@@ -138,7 +139,7 @@ Business business;
 
         if (profile instanceof FacultyProfile) {
 
-            FacultyWorkArea panel = new FacultyWorkArea(MainPanel,business);
+            FacultyWorkArea panel = new FacultyWorkArea(MainPanel,department);
             MainPanel.add("FacultyWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
@@ -146,14 +147,14 @@ Business business;
 
         if (profile instanceof AdmainProfile) {
 
-            AdmainWorkArea panel = new AdmainWorkArea(MainPanel,business);
+            AdmainWorkArea panel = new AdmainWorkArea(MainPanel,department);
             MainPanel.add("AdmainWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
         }
         if (profile instanceof RegisterProfile) {
 
-            RegisterWorkArea panel = new RegisterWorkArea(MainPanel,business);
+            RegisterWorkArea panel = new RegisterWorkArea(MainPanel,department);
             MainPanel.add("RegisterWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);

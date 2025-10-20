@@ -14,8 +14,10 @@ import info5100.university.example.Degree.Degree;
 import info5100.university.example.Employer.EmployerDirectory;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.PersonDirectory;
+import info5100.university.example.Persona.RegisterDirectory;
 import info5100.university.example.Persona.StudentDirectory;
 import info5100.university.example.Persona.StudentProfile;
+import info5100.university.example.Persona.UserAccountDirectory;
 import java.util.HashMap;
 
 /**
@@ -31,6 +33,11 @@ public class Department {
     FacultyDirectory facultydirectory;
     EmployerDirectory employerdirectory;
     Degree degree;
+    RegisterDirectory registerdirectory;
+    UserAccountDirectory useraccountdirectory;
+    Calendar calendar;
+    CourseLoad courseload;
+    
 
     HashMap<String, CourseSchedule> mastercoursecatalog;
 
@@ -41,8 +48,60 @@ public class Department {
         studentdirectory = new StudentDirectory(this); //pass the department object so it stays linked to it
         persondirectory = new PersonDirectory();
         degree = new Degree("MSIS");
-        
+        useraccountdirectory = new UserAccountDirectory(this);
+        calendar = new Calendar();
+        facultydirectory = new FacultyDirectory(this);
+        registerdirectory=new RegisterDirectory(this);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public CourseCatalog getCoursecatalog() {
+        return coursecatalog;
+    }
+
+    public PersonDirectory getPersondirectory() {
+        return persondirectory;
+    }
+
+    public StudentDirectory getStudentdirectory() {
+        return studentdirectory;
+    }
+
+    public FacultyDirectory getFacultydirectory() {
+        return facultydirectory;
+    }
+
+    public EmployerDirectory getEmployerdirectory() {
+        return employerdirectory;
+    }
+
+    public Degree getDegree() {
+        return degree;
+    }
+
+    public RegisterDirectory getRegisterdirectory() {
+        return registerdirectory;
+    }
+
+    public UserAccountDirectory getUseraccountdirectory() {
+        return useraccountdirectory;
+    }
+
+    public Calendar getCalendar() {
+        return calendar;
+    }
+
+    public CourseLoad getCourseload() {
+        return courseload;
+    }
+
+    public HashMap<String, CourseSchedule> getMastercoursecatalog() {
+        return mastercoursecatalog;
+    }
+    
     public void addCoreCourse(Course c){
         degree.addCoreCourse(c);
         
@@ -80,9 +139,9 @@ public void addElectiveCourse(Course c){
 
     }
 
-    public Course newCourse(String n, String nm, int cr) {
+    public Course newCourse( String nm, int cr) {
 
-        Course c = coursecatalog.newCourse(n, nm, cr);
+        Course c = coursecatalog.newCourse( nm, cr);
         return c;
     }
 
@@ -94,7 +153,7 @@ public void addElectiveCourse(Course c){
 
     }
 
-    public void RegisterForAClass(String studentid, String cn, String semester) {
+    public void RegisterForAClass(String studentid, int cn, String semester) {
 
         StudentProfile sp = studentdirectory.findStudent(studentid);
 

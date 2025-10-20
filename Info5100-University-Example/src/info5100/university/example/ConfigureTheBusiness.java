@@ -25,10 +25,10 @@ import info5100.university.example.Persona.UserAccountDirectory;
  * @author sunzuolin
  */
 public class ConfigureTheBusiness {
-     static Business initialize(){
-         Department myDepartment = new Department("Information Systems");
-        Business business = new Business("Library Management System",myDepartment);
-        PersonDirectory persondirectory = business.getPersondirectory();
+     static Department initialize(){
+         Department department = new Department("Information Systems");
+        
+        PersonDirectory persondirectory = department.getPersondirectory();
           Person person001 = persondirectory.newPerson("John Smit");
           Person person002 = persondirectory.newPerson("Gina Montana");
           Person person003 = persondirectory.newPerson("Adam Rollen");
@@ -39,23 +39,21 @@ public class ConfigureTheBusiness {
           Person person008 = persondirectory.newPerson("Jack While");
           Person person009 = persondirectory.newPerson("Fidelity");
           
-          StudentDirectory studentdirectory = business.getStudentdirectory();
+          StudentDirectory studentdirectory = department.getStudentdirectory();
           StudentProfile stu1 = studentdirectory.newStudentProfile(person003);
           StudentProfile stu2 = studentdirectory.newStudentProfile(person005);
           
-
-         
-          CourseCatalog coursecatalog = business.getCoursecatalog();
-          Course  course1 = coursecatalog.newCourse("1", "Introduction to Programming", 2);
-          Course  course2 = coursecatalog.newCourse("2", "Data Structures and Algorithms", 2);
-          Course  course3 = coursecatalog.newCourse("3", "Discrete Mathematics", 2);
-          Course  course4 = coursecatalog.newCourse("4", "Computer Organization and Architecture", 2);
-          Course  course5 = coursecatalog.newCourse("5", "Operating Systems", 2);
-          Course  course6 = coursecatalog.newCourse("6", "Database Management Systems", 2);
-          Course  course7 = coursecatalog.newCourse("7", "Principles of Computer Networks", 2);
-          Course  course8 = coursecatalog.newCourse("8", "Software Engineering", 2);
+          CourseCatalog coursecatalog = department.getCoursecatalog();
+          Course  course1 = coursecatalog.newCourse( "Introduction to Programming", 2);
+          Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 2);
+          Course  course3 = coursecatalog.newCourse( "Discrete Mathematics", 2);
+          Course  course4 = coursecatalog.newCourse( "Computer Organization and Architecture", 2);
+          Course  course5 = coursecatalog.newCourse( "Operating Systems", 2);
+          Course  course6 = coursecatalog.newCourse( "Database Management Systems", 2);
+          Course  course7 = coursecatalog.newCourse( "Principles of Computer Networks", 2);
+          Course  course8 = coursecatalog.newCourse( "Software Engineering", 2);
           
-          Calendar calendar = business.getCalendar();
+          Calendar calendar = department.getCalendar();
           CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
           CourseOffer fall_course1 = fallSchedule1.newCourseOffer(course1.getCourseNumber());
           CourseOffer fall_coirse2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
@@ -76,13 +74,13 @@ public class ConfigureTheBusiness {
           CourseOffer winter_coirse2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
           calendar.addCourseSchedule("2025winter", winterSchedule);
 
-          RegisterDirectory registerdirectory = business.getRegisterdirectory();//chunyan
+          RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
           RegisterProfile reg1 = registerdirectory.newRegisterProfile(person001);
           
-          UserAccountDirectory useraccountdirectory = business.getUseraccountdirectory();
+          UserAccountDirectory useraccountdirectory = department.getUseraccountdirectory();
           UserAccount   useraccount1 = useraccountdirectory.addUserAccount(stu1, "student1", "123456");
           UserAccount   useraccount2 = useraccountdirectory.addUserAccount(stu2, "student2", "123456");
           UserAccount   useraccount3 = useraccountdirectory.addUserAccount(reg1, "register1", "123456");
-          return business;
+          return department;
      }
 }
