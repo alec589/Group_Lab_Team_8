@@ -4,6 +4,11 @@
  */
 package info5100.university.example;
 
+import info5100.university.example.CourseCatalog.Course;
+import info5100.university.example.CourseCatalog.CourseCatalog;
+import info5100.university.example.CourseSchedule.CourseOffer;
+import info5100.university.example.CourseSchedule.CourseSchedule;
+import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.Person;
@@ -36,9 +41,40 @@ public class ConfigureTheBusiness {
           StudentProfile stu1 = studentdirectory.newStudentProfile(person003);
           StudentProfile stu2 = studentdirectory.newStudentProfile(person005);
           
-          UserAccountDirectory useraccountdirectory = business.useraccountdirectory;
+          UserAccountDirectory useraccountdirectory = business.getUseraccountdirectory();
           UserAccount   useraccount1 = useraccountdirectory.addUserAccount(stu1, "student1", "123456");
           UserAccount   useraccount2 = useraccountdirectory.addUserAccount(stu2, "student2", "123456");
+          
+          CourseCatalog coursecatalog = business.getCoursecatalog();
+          Course  course1 = coursecatalog.newCourse("1", "Introduction to Programming", 2);
+          Course  course2 = coursecatalog.newCourse("2", "Data Structures and Algorithms", 2);
+          Course  course3 = coursecatalog.newCourse("3", "Discrete Mathematics", 2);
+          Course  course4 = coursecatalog.newCourse("4", "Computer Organization and Architecture", 2);
+          Course  course5 = coursecatalog.newCourse("5", "Operating Systems", 2);
+          Course  course6 = coursecatalog.newCourse("6", "Database Management Systems", 2);
+          Course  course7 = coursecatalog.newCourse("7", "Principles of Computer Networks", 2);
+          Course  course8 = coursecatalog.newCourse("8", "Software Engineering", 2);
+          
+          Calendar calendar = business.getCalendar();
+          CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
+          CourseOffer fall_course1 = fallSchedule1.newCourseOffer(course1.getCourseNumber());
+          CourseOffer fall_coirse2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
+          calendar.addCourseSchedule("2025fall", fallSchedule1);
+          
+          CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
+          CourseOffer spring_course1 = springSchedule.newCourseOffer(course3.getCourseNumber());
+          CourseOffer spring_coirse2 = springSchedule.newCourseOffer(course4.getCourseNumber());
+          calendar.addCourseSchedule("2026spring", springSchedule);
+          
+          CourseSchedule summerSchedule = new CourseSchedule("2026summer", coursecatalog);
+          CourseOffer summer_course1 = summerSchedule.newCourseOffer(course7.getCourseNumber());
+          CourseOffer summerg_coirse2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
+          calendar.addCourseSchedule("2026summer", summerSchedule);
+          
+          CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);
+          CourseOffer winter_course1 = winterSchedule.newCourseOffer(course5.getCourseNumber());
+          CourseOffer winter_coirse2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
+          calendar.addCourseSchedule("2025winter", winterSchedule);
           return business;
      }
 }

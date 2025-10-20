@@ -25,7 +25,9 @@ public class Calendar {
         mastercatalog.put(semester, cs);
         
     }
-    
+    public CourseSchedule getCourseSchedule(String semester) {
+        return mastercatalog.get(semester);
+    }
     
     
 }

@@ -35,9 +35,11 @@ public class CourseOffer {
     }
 
     public String getCourseNumber() {
-        return course.getCOurseNumber();
+        return course.getCourseNumber();
     }
-
+public String getCourseName() {
+        return course.getName();
+    }
     public void generatSeats(int n) {
 
         for (int i = 0; i < n; i++) {

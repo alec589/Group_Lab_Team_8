@@ -4,6 +4,9 @@
  */
 package info5100.university.example;
 
+import info5100.university.example.CourseCatalog.CourseCatalog;
+
+import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.PersonDirectory;
@@ -21,6 +24,9 @@ public class Business {
     FacultyDirectory facultydirectory;
     UserAccountDirectory useraccountdirectory;
     PersonDirectory persondirectory;
+    Calendar calendar;
+
+    CourseCatalog coursecatalog;
     
     public Business(String n, Department d ){
         Name = n ;
@@ -28,6 +34,13 @@ public class Business {
         facultydirectory = new FacultyDirectory(d);
         useraccountdirectory = new UserAccountDirectory(d);
         persondirectory = new PersonDirectory();
+        coursecatalog = new CourseCatalog(d);
+        calendar = new Calendar();
+ 
+    }
+
+    public Calendar getCalendar() {
+        return calendar;
     }
 
     public PersonDirectory getPersondirectory() {
@@ -48,6 +61,10 @@ public class Business {
 
     public UserAccountDirectory getUseraccountdirectory() {
         return useraccountdirectory;
+    }
+
+    public CourseCatalog getCoursecatalog() {
+        return coursecatalog;
     }
     
 }

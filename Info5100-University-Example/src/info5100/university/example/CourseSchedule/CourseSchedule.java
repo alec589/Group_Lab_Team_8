@@ -37,6 +37,10 @@ public class CourseSchedule {
         return co;
     }
 
+    public ArrayList<CourseOffer> getSchedule() {
+        return schedule;
+    }
+
     public CourseOffer getCourseOfferByNumber(String n) {
 
         for (CourseOffer co : schedule) {
