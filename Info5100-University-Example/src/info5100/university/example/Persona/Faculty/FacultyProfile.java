@@ -18,10 +18,22 @@ public class FacultyProfile extends Profile{
     Person person;
     ArrayList <FacultyAssignment> facultyassignments; 
     
+    static int counter=0;
+    int ID;
+    String firstName;
+    String lastName;
+    String email;
+    String phoneNumber;
+    String position;
+    String officeLocation;
+    
     public FacultyProfile(Person p) {
         super(p);
         person = p;
         facultyassignments = new ArrayList();
+        
+        counter++;
+        ID = counter;
     }
     public  double getProfAverageOverallRating(){
         
@@ -57,7 +69,66 @@ public class FacultyProfile extends Profile{
         }
         return false;
     }
-public String getrole(){
+    
+    public String getrole(){
         return  "Faculty";
     }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getOfficeLocation() {
+        return officeLocation;
+    }
+
+    public void setOfficeLocation(String officeLocation) {
+        this.officeLocation = officeLocation;
+    }
+    
+    
 }

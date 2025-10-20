@@ -54,6 +54,16 @@ public class FacultyDirectory {
             }
         }
             return null; //not found after going through the whole list
-         }
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+    
+    
     
 }

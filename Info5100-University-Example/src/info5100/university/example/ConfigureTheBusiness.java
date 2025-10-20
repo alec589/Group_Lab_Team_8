@@ -79,6 +79,14 @@ public class ConfigureTheBusiness {
           FacultyProfile fa09 = facultyDirectory.newFacultyProfile(person0019);
           FacultyProfile fa010 = facultyDirectory.newFacultyProfile(person0020);
           
+          //Lu: configure faculty details
+          fa01.setFirstName("Kevin");
+          fa01.setLastName("Hill");
+          fa01.setEmail("kevin@northeastern.edu");
+          fa01.setPhoneNumber("999-999-9999");
+          fa01.setPosition("Professor");
+          fa01.setOfficeLocation("Ell Hall 120");
+          
           CourseCatalog coursecatalog = department.getCoursecatalog();
           Course  course1 = coursecatalog.newCourse( "Introduction to Programming", 2);
           Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 2);
@@ -100,15 +108,15 @@ public class ConfigureTheBusiness {
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
           CourseOffer spring_course1 = springSchedule.newCourseOffer(course3.getCourseNumber());
           spring_course1.generatSeats(30);
-          CourseOffer spring_coirse2 = springSchedule.newCourseOffer(course4.getCourseNumber());
-          spring_course1.generatSeats(30);
+          CourseOffer spring_course2 = springSchedule.newCourseOffer(course4.getCourseNumber());
+          spring_course2.generatSeats(30);
           calendar.addCourseSchedule("2026spring", springSchedule);
           
           CourseSchedule summerSchedule = new CourseSchedule("2026summer", coursecatalog);
           CourseOffer summer_course1 = summerSchedule.newCourseOffer(course7.getCourseNumber());
           summer_course1.generatSeats(30);
-          CourseOffer summerg_coirse2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
-          summerg_coirse2.generatSeats(30);
+          CourseOffer summerg_course2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
+          summerg_course2.generatSeats(30);
           calendar.addCourseSchedule("2026summer", summerSchedule);
           
           CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);

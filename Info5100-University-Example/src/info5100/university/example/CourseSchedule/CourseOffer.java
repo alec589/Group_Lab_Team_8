@@ -37,9 +37,11 @@ public class CourseOffer {
     public int getCourseNumber() {
         return course.getCourseNumber();
     }
-public String getCourseName() {
+
+    public String getCourseName() {
         return course.getName();
     }
+    
     public void generatSeats(int n) {
 
         for (int i = 0; i < n; i++) {
@@ -47,7 +49,6 @@ public String getCourseName() {
             seatlist.add(new Seat(this, i));
 
         }
-
     }
 
     public Seat getEmptySeat() {
@@ -85,14 +86,18 @@ public String getCourseName() {
         }
         return sum;
     }
+    
     public Course getSubjectCourse(){
         return course;
     }
+    
     public int getCreditHours(){
         return course.getCredits();
     }
-public String toString() {
- 
-    return String.valueOf(course.getCourseNumber());
-}
+    
+    public String toString() {
+
+        return String.valueOf(course.getCourseNumber());
+    }
+    
 }

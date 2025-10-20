@@ -62,4 +62,13 @@ public class CourseSchedule {
         return sum;
     }
 
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
+    
 }

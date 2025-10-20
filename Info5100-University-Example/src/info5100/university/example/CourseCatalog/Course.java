@@ -15,6 +15,9 @@ public class Course {
     String name;
     int credits;
     int price = 1500; //per credit hour
+    
+    String description;
+    boolean enrollmentStatus;
 
     public Course( String numb, int ch) {
         this.number=counter++;
@@ -41,5 +44,22 @@ public class Course {
     public String getName() {
         return name;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isEnrollmentStatus() {
+        return enrollmentStatus;
+    }
+
+    public void setEnrollmentStatus(boolean enrollmentStatus) {
+        this.enrollmentStatus = enrollmentStatus;
+    }
+    
     
 }
