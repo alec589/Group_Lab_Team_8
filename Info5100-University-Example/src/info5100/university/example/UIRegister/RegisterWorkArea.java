@@ -4,7 +4,8 @@
  */
 package info5100.university.example.UIRegister;
 
-import info5100.university.example.Business;
+
+import info5100.university.example.Department.Department;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -14,14 +15,14 @@ import javax.swing.JPanel;
  */
 public class RegisterWorkArea extends javax.swing.JPanel {
 JPanel mainpanel;
-Business business;
+Department department;
     /**
      * Creates new form RegistrarWorkArea
      */
-    public RegisterWorkArea(JPanel mainpanel,Business business) {
+    public RegisterWorkArea(JPanel mainpanel,Department department) {
         initComponents();
         this.mainpanel=mainpanel;
-        this.business=business;
+        this.department=department;
     }
 
     /**

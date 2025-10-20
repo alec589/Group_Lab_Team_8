@@ -4,7 +4,8 @@
  */
 package info5100.university.example.UIRegister;
 
-import info5100.university.example.Business;
+
+import info5100.university.example.Department.Department;
 import javax.swing.JPanel;
 
 /**
@@ -13,14 +14,14 @@ import javax.swing.JPanel;
  */
 public class ManageProfileJPanel extends javax.swing.JPanel {
 JPanel mainpanel;
-Business business;
+Department Department;
     /**
      * Creates new form ManageProfileJPanel
      */
-    public ManageProfileJPanel(JPanel mainpanel, Business business) {
+    public ManageProfileJPanel(JPanel mainpanel, Department Department) {
         initComponents();
          this.mainpanel=mainpanel;
-        this.business=business;
+        this.Department=Department;
     }
 
     /**

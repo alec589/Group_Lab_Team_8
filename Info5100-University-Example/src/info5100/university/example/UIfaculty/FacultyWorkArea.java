@@ -4,7 +4,8 @@
  */
 package info5100.university.example.UIfaculty;
 
-import info5100.university.example.Business;
+
+import info5100.university.example.Department.Department;
 import javax.swing.JPanel;
 
 /**
@@ -13,14 +14,14 @@ import javax.swing.JPanel;
  */
 public class FacultyWorkArea extends javax.swing.JPanel {
 JPanel mainpanel;
-Business business;
+Department department;
     /**
      * Creates new form FacultyWorkArea
      */
-    public FacultyWorkArea(JPanel mainpanel,Business business) {
+    public FacultyWorkArea(JPanel mainpanel,Department department) {
         initComponents();
         this.mainpanel=mainpanel;
-        this.business=business;
+        this.department=department;
     }
 
     /**
