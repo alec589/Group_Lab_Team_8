@@ -8,14 +8,22 @@ package info5100.university.example.Persona;
  *
  * @author sunzuolin
  */
-public class RegistrarProfile extends Profile{
+public class RegisterProfile extends Profile{
     Person person;
-     public RegistrarProfile(Person p){
+     public RegisterProfile(Person p){
      
       super(p);
         person = p;   
      }
+     
      public String getrole(){
-        return  "Admain";
+        return  "Register";
+    }
+     
+       public boolean isMatch(String id) {
+        if (person.getPersonId().equals(id)) {
+            return true;
+        }
+        return false;
     }
 }
