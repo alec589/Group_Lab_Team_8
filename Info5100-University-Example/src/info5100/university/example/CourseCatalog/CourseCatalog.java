@@ -39,5 +39,12 @@ public class CourseCatalog {
         }
         return null;
     }
-
+    public Course getCourseByName(String n){
+        
+        for( Course c: courselist){
+            
+            if(c.getName()==n) return c;
+        }
+        return null;
+    }
 }
