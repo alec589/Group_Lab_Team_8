@@ -44,6 +44,10 @@ public class Course {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -52,5 +56,6 @@ public class Course {
         this.description = description;
     }
 
+    
     
 }
