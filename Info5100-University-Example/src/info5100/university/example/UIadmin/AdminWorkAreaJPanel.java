@@ -138,50 +138,32 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnManageAccounts1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAccounts1ActionPerformed
         // TODO add your handling code here:
-       AdminManageUserAccountsJPanel manageAccPanel = new AdminManageUserAccountsJPanel(); // 假设它只需要 Department
-        mainCardLayoutJPanel.add("AdminManageUserAccounts", manageAccPanel);
-        CardLayout layout = (CardLayout) mainCardLayoutJPanel.getLayout();
-        layout.show(mainCardLayoutJPanel, "AdminManageUserAccounts");
+       
     }//GEN-LAST:event_btnManageAccounts1ActionPerformed
 
     private void btnManageFaculty1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFaculty1ActionPerformed
         // TODO add your handling code here:
-       AdminManageFacultyJPanel manageFacultyPanel = new AdminManageFacultyJPanel(); // 按需传递参数
-        mainCardLayoutJPanel.add("AdminManageFaculty", manageFacultyPanel);
-        CardLayout layout = (CardLayout) mainCardLayoutJPanel.getLayout();
-        layout.show(mainCardLayoutJPanel, "AdminManageFaculty");
+      
     }//GEN-LAST:event_btnManageFaculty1ActionPerformed
 
     private void btnRegisterPerson1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterPerson1ActionPerformed
         // TODO add your handling code here:
-         AdminPersonRegistrationJPanel personRegPanel = new AdminPersonRegistrationJPanel(mainCardLayoutJPanel, department.getPersondirectory());
-        mainCardLayoutJPanel.add("AdminPersonRegistration", personRegPanel); // 添加到外层 CardLayout
-        CardLayout layout = (CardLayout) mainCardLayoutJPanel.getLayout();
-        layout.show(mainCardLayoutJPanel, "AdminPersonRegistration");
+        
     }//GEN-LAST:event_btnRegisterPerson1ActionPerformed
 
     private void btnManageRegistrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRegistrar1ActionPerformed
         // TODO add your handling code here:
-        AdminManageRegistrarJPanel manageRegistrarPanel = new AdminManageRegistrarJPanel(); // 按需传递参数
-         mainCardLayoutJPanel.add("AdminManageRegistrar", manageRegistrarPanel);
-         CardLayout layout = (CardLayout) mainCardLayoutJPanel.getLayout();
-         layout.show(mainCardLayoutJPanel, "AdminManageRegistrar");
+       
     }//GEN-LAST:event_btnManageRegistrar1ActionPerformed
 
     private void btnManageStudents1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageStudents1ActionPerformed
         // TODO add your handling code here:
-       AdminManageStudentsJPanel manageStudentsPanel = new AdminManageStudentsJPanel(); // 按需传递参数
-        mainCardLayoutJPanel.add("AdminManageStudents", manageStudentsPanel);
-        CardLayout layout = (CardLayout) mainCardLayoutJPanel.getLayout();
-        layout.show(mainCardLayoutJPanel, "AdminManageStudents");
+       
     }//GEN-LAST:event_btnManageStudents1ActionPerformed
 
     private void btnAnalytics1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalytics1ActionPerformed
         // TODO add your handling code here:
-        AdminAnalyticsDashboardJPanel analyticsPanel = new AdminAnalyticsDashboardJPanel(); // 按需传递参数
-         mainCardLayoutJPanel.add("AdminAnalyticsDashboard", analyticsPanel);
-         CardLayout layout = (CardLayout) mainCardLayoutJPanel.getLayout();
-         layout.show(mainCardLayoutJPanel, "AdminAnalyticsDashboard");
+        
     }//GEN-LAST:event_btnAnalytics1ActionPerformed
 
 
