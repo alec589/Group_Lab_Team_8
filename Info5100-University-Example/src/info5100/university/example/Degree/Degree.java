@@ -6,6 +6,7 @@
 package info5100.university.example.Degree;
 
 import info5100.university.example.CourseCatalog.Course;
+import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.SeatAssignment;
 import info5100.university.example.Persona.Person;
 import info5100.university.example.Persona.StudentProfile;
@@ -20,11 +21,12 @@ public class Degree {
     String title;
     ArrayList<Course> corelist;
     ArrayList<Course> electives;
-
-    public Degree(String name) {
+   
+    public Degree(String name ) {
         title = name;
         corelist = new ArrayList();
         electives = new ArrayList();
+        
     }
 
     
@@ -39,17 +41,10 @@ public class Degree {
     }
 
     public boolean isStudentReadyToGraduate(StudentProfile sp) {
-
-        //Extract transcript from studentprofile
-        //Extract the list of courses taken so far from the student transcript
-        //For each core course in the core list of the degree do the following:
-        //Check if the core class at hand is in the transcrip
-        //Repeat this check for the electives as well
-        ArrayList sas = sp.getCourseList(); //seatAssignments extracted from course loads
-
+        ArrayList sas = sp.getCourseList(); 
         if (validateCoreClasses(sas) == false) {
             return false;
-        } if(getcredishours(sas) <= 32){
+        } if(getcredishours(sp) <= 32){
             return false;
         }
             return true; 
@@ -65,11 +60,14 @@ public class Degree {
         return true; 
 
     }
-    public int getcredishours(ArrayList<SeatAssignment> sas){
+    public int getcredishours(StudentProfile sp){
         int sum=0;
-        for(SeatAssignment sa : sas){
-            sum = sum+ sa.getCreditHours();
-        }
+        for(CourseLoad courseLoad : sp.getTranscript().getCourseloadlist().values()){
+        for(SeatAssignment sa : courseLoad.getSeatAssignments()){
+           if(!sa.ispass()){
+               sum = sum+ sa.getCreditHours();
+           }
+        }}
         return sum;
     }
     public boolean isCoreSatisfied(ArrayList<SeatAssignment> sas, Course course1) {
