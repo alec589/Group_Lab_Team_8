@@ -49,7 +49,13 @@ public class Transcript {
 
     public CourseLoad getCourseLoadBySemester(String semester) {
 
-        return courseloadlist.get(semester);
+       CourseLoad cl = courseloadlist.get(semester);
+        
+       
+        if (cl == null) {
+        return newCourseLoad(semester);
+        }
+        return cl;
 
     }
 
@@ -78,6 +84,10 @@ public class Transcript {
     //generate a list of all courses taken so far (seetassignments) 
     //from multiple semesters (course loads)
     //from seat assignments we will be able to access the course offers
+
+    public HashMap<String, CourseLoad> getCourseloadlist() {
+        return courseloadlist;
+    }
 
     public ArrayList<SeatAssignment> getCourseList() {
         ArrayList temp2;
