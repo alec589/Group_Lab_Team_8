@@ -15,7 +15,6 @@ import info5100.university.example.Persona.StudentProfile;
 import info5100.university.example.Persona.UserAccount;
 import info5100.university.example.Persona.UserAccountDirectory;
 import info5100.university.example.UIRegister.RegisterWorkArea;
-import info5100.university.example.UIadmin.AdmainWorkArea;
 import info5100.university.example.UIadmin.AdminWorkAreaJPanel;
 import info5100.university.example.UIfaculty.FacultyWorkArea;
 import info5100.university.example.UIstudent.StudentWorkArea;
@@ -124,7 +123,7 @@ StudentProfile studentprofile;
         if (ua == null) {
             return;
         }
-        AdmainWorkArea admainworkarea;
+        AdminWorkAreaJPanel adminworkareajpanel;
         StudentWorkArea studentworkarea;
         FacultyWorkArea facultyworkarea;
         RegisterWorkArea registarworkarea;
