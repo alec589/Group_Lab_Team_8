@@ -88,8 +88,8 @@ public class ConfigureTheBusiness {
           fa01.setOfficeLocation("Ell Hall 120");
           
           CourseCatalog coursecatalog = department.getCoursecatalog();
-          Course  course1 = coursecatalog.newCourse( "Introduction to Programming", 2);
-          Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 2);
+          Course  course1 = coursecatalog.newCourse( "Introduction to Programming", 4);
+          Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 5);
           Course  course3 = coursecatalog.newCourse( "Discrete Mathematics", 2);
           Course  course4 = coursecatalog.newCourse( "Computer Organization and Architecture", 2);
           Course  course5 = coursecatalog.newCourse( "Operating Systems", 2);

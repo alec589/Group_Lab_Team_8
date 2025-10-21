@@ -94,7 +94,20 @@ public class CourseOffer {
     public int getCreditHours(){
         return course.getCredits();
     }
+    @Override
+    public boolean equals(Object o) {
+    if (this == o) return true;
+
+    if (o == null || getClass() != o.getClass()) return false;
     
+    CourseOffer that = (CourseOffer) o;
+    return this.course.getName() == that.course.getName();
+}
+    @Override
+public int hashCode() {
+    
+    return this.course.getCourseNumber();
+}
     public String toString() {
 
         return String.valueOf(course.getCourseNumber());
