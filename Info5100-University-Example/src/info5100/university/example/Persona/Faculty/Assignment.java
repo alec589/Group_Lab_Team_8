@@ -16,13 +16,23 @@ public class Assignment {
     FacultyProfile facultyprofile;
     private ImageIcon logoImage;
     String Description;
+    Boolean completed;
     public Assignment(String name,FacultyProfile fp, int maxPoints) {
         this.assignmentName = name;
         this.facultyprofile =fp;
         this.maxPoints = maxPoints;
-       
+        completed = false;
     }
 
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
+    }
+
+    
+    public Boolean iscompleted(){
+        return completed;
+
+    }
     public ImageIcon getLogoImage() {
         return logoImage;
     }
