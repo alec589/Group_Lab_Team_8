@@ -10,13 +10,12 @@ package info5100.university.example.Persona.Faculty;
  */
 public class Assignment {
     private String assignmentName;
-    private String description;
     private int maxPoints;
     
-    public Assignment(String name, int maxPoints, String description) {
+    public Assignment(String name, int maxPoints) {
         this.assignmentName = name;
         this.maxPoints = maxPoints;
-        this.description = description;
+       
     }
 
    

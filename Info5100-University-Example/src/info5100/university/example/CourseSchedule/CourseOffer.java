@@ -112,5 +112,17 @@ public int hashCode() {
 
         return String.valueOf(course.getCourseNumber());
     }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public ArrayList<Seat> getSeatlist() {
+        return seatlist;
+    }
+
+    public FacultyAssignment getFacultyassignment() {
+        return facultyassignment;
+    }
     
 }

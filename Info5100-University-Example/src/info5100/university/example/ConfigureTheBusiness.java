@@ -10,6 +10,7 @@ import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
 import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
+import info5100.university.example.Persona.Faculty.Assignment;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Person;
@@ -101,13 +102,25 @@ public class ConfigureTheBusiness {
           CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
           CourseOffer fall_course1 = fallSchedule1.newCourseOffer(course1.getCourseNumber());
           fall_course1.generatSeats(30);
+          fall_course1.AssignAsTeacher(fa01);
+          
+          Assignment assignment1 = new Assignment("Term Project", 100);
+          Assignment assignment2 = new Assignment("Introduction to Java", 100);
+          fall_course1.getFacultyassignment().assignAssignment(assignment1);
+          fall_course1.getFacultyassignment().assignAssignment(assignment2);
+          
           CourseOffer fall_course2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
           fall_course2.generatSeats(40);
           calendar.addCourseSchedule("2025fall", fallSchedule1);
           
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
-          CourseOffer spring_course1 = springSchedule.newCourseOffer(course3.getCourseNumber());
-          spring_course1.generatSeats(30);
+          CourseOffer fall_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
+          fall_course3.generatSeats(30);
+          fall_course1.AssignAsTeacher(fa02);
+          Assignment assignment3 = new Assignment("Midterm Project: System Design", 100);
+          fall_course3.getFacultyassignment().assignAssignment(assignment3);
+          
+          
           CourseOffer spring_course2 = springSchedule.newCourseOffer(course4.getCourseNumber());
           spring_course2.generatSeats(30);
           calendar.addCourseSchedule("2026spring", springSchedule);
