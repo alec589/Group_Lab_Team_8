@@ -10,6 +10,7 @@ import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
 import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
+import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.Assignment;
 import info5100.university.example.Persona.Faculty.FacultyAssignment;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
@@ -64,6 +65,7 @@ public class ConfigureTheBusiness {
           Person person0028 = persondirectory.newPerson("Michael Davis");
           Person person0029 = persondirectory.newPerson("Eric Ross");
           Person person0030 = persondirectory.newPerson("Justin Foster");
+          Person person0031 = persondirectory.newPerson("Lucy While");    //Kailu
           
           StudentDirectory studentdirectory = department.getStudentdirectory();
           StudentProfile stu1 = studentdirectory.newStudentProfile(person003);
@@ -212,6 +214,8 @@ public class ConfigureTheBusiness {
           UserAccount   useraccount19 = useraccountdirectory.addUserAccount(fa09, "faculty9", "123456");
           UserAccount   useraccount20 = useraccountdirectory.addUserAccount(fa010, "faculty10", "123456");
           
+          AdmainProfile adminProfile = new AdmainProfile(person0031);  // kailu
+          UserAccount useraccount4 = useraccountdirectory.addUserAccount(adminProfile, "admin", "123456");
           
           
           return department;

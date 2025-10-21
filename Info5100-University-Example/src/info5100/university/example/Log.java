@@ -16,6 +16,7 @@ import info5100.university.example.Persona.UserAccount;
 import info5100.university.example.Persona.UserAccountDirectory;
 import info5100.university.example.UIRegister.RegisterWorkArea;
 import info5100.university.example.UIadmin.AdmainWorkArea;
+import info5100.university.example.UIadmin.AdminWorkAreaJPanel;
 import info5100.university.example.UIfaculty.FacultyWorkArea;
 import info5100.university.example.UIstudent.StudentWorkArea;
 import java.awt.CardLayout;
@@ -146,8 +147,8 @@ StudentProfile studentprofile;
         }
 
         if (profile instanceof AdmainProfile) {
-
-            AdmainWorkArea panel = new AdmainWorkArea(MainPanel,department);
+            AdmainProfile ap = (AdmainProfile)profile;
+            AdminWorkAreaJPanel panel = new AdminWorkAreaJPanel(MainPanel,department,ap);
             MainPanel.add("AdmainWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
