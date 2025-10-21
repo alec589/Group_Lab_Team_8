@@ -7,6 +7,7 @@ package info5100.university.example.Degree;
 
 import info5100.university.example.CourseCatalog.Course;
 import info5100.university.example.CourseSchedule.SeatAssignment;
+import info5100.university.example.Persona.Person;
 import info5100.university.example.Persona.StudentProfile;
 import java.util.ArrayList;
 
@@ -26,13 +27,14 @@ public class Degree {
         electives = new ArrayList();
     }
 
-    public void addCoreCourse(Course c) {
+    
+    public Course addCoreCourse(Course c) {
         corelist.add(c);
-
+        return c;
     }
-
-    public void addElectiveCourse(Course c) {
+    public Course addElectiveCourse(Course c) {
         electives.add(c);
+        return c;
 
     }
 

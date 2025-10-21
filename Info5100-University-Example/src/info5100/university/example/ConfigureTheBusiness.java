@@ -113,7 +113,13 @@ public class ConfigureTheBusiness {
           course6.setDescription("Data storage design");
           course7.setDescription("Network fundamentals");
           course8.setDescription("System development lifecycle");
-          
+          Course corecourse1 = department.getDegree().addCoreCourse(course1);
+          Course electivecourse1 = department.getDegree().addElectiveCourse(course2);
+          Course electivecourse2 = department.getDegree().addElectiveCourse(course3);
+          Course electivecourse3 = department.getDegree().addElectiveCourse(course4);
+          Course electivecourse4 = department.getDegree().addElectiveCourse(course5);
+          Course electivecourse5 = department.getDegree().addElectiveCourse(course6);
+          Course electivecourse6 = department.getDegree().addElectiveCourse(course7);
           
           Calendar calendar = department.getCalendar();
           CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
