@@ -116,7 +116,7 @@ public class ConfigureTheBusiness {
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
           CourseOffer fall_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
           fall_course3.generatSeats(30);
-          fall_course1.AssignAsTeacher(fa02);
+          fall_course3.AssignAsTeacher(fa02);
           Assignment assignment3 = new Assignment("Midterm Project: System Design", 100);
           fall_course3.getFacultyassignment().assignAssignment(assignment3);
           
