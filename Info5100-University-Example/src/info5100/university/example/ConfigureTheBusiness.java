@@ -11,6 +11,7 @@ import info5100.university.example.CourseSchedule.CourseSchedule;
 import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Faculty.Assignment;
+import info5100.university.example.Persona.Faculty.FacultyAssignment;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Person;
@@ -87,6 +88,13 @@ public class ConfigureTheBusiness {
           fa01.setPhoneNumber("999-999-9999");
           fa01.setPosition("Professor");
           fa01.setOfficeLocation("Ell Hall 120");
+          fa02.setFirstName("Julia");
+          fa02.setLastName("Green");
+          fa02.setEmail("julia@northeastern.edu");
+          fa02.setPhoneNumber("888-888-8888");
+          fa02.setPosition("Teaching Assistant");
+          fa02.setOfficeLocation("ISEC 260");
+          
           
           CourseCatalog coursecatalog = department.getCoursecatalog();
           Course  course1 = coursecatalog.newCourse( "Introduction to Programming", 4);
@@ -102,7 +110,7 @@ public class ConfigureTheBusiness {
           CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
           CourseOffer fall_course1 = fallSchedule1.newCourseOffer(course1.getCourseNumber());
           fall_course1.generatSeats(30);
-          fall_course1.AssignAsTeacher(fa01);
+          fall_course1.AssignAsTeacher(fa01);                                                                       //Lu: fall1 - fa01
           fall_course1.setLocation(211, 1, 102);
           fall_course1.setTimeSchedule("Monday", 8, 10);
           
@@ -113,6 +121,7 @@ public class ConfigureTheBusiness {
           
           CourseOffer fall_course2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
           fall_course2.generatSeats(40);
+          fall_course2.AssignAsTeacher(fa02);                                                                       //Lu: fall2 - fa02
           calendar.addCourseSchedule("2025fall", fallSchedule1);
           fall_course2.setLocation(316, 1, 105);
           fall_course2.setTimeSchedule("Thursday", 7, 9);
@@ -120,7 +129,7 @@ public class ConfigureTheBusiness {
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
           CourseOffer spring_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
           spring_course3.generatSeats(30);
-          spring_course3.AssignAsTeacher(fa02);
+          spring_course3.AssignAsTeacher(fa02);                                                                     //Lu: spring3 - fa02
           spring_course3.setLocation(113, 3,309);
           spring_course3.setTimeSchedule("Friday", 10, 11);
           Assignment assignment3 = new Assignment("Midterm Project: System Design", fa02,100);
@@ -129,6 +138,7 @@ public class ConfigureTheBusiness {
           
           CourseOffer spring_course2 = springSchedule.newCourseOffer(course4.getCourseNumber());
           spring_course2.generatSeats(30);
+          spring_course2.AssignAsTeacher(fa01);                                                                     //Lu: spring2 - fa01
           calendar.addCourseSchedule("2026spring", springSchedule);
           spring_course2.setLocation(813, 7,732);
           spring_course2.setTimeSchedule("Friday", 13, 15);
@@ -136,10 +146,12 @@ public class ConfigureTheBusiness {
           CourseSchedule summerSchedule = new CourseSchedule("2026summer", coursecatalog);
           CourseOffer summer_course1 = summerSchedule.newCourseOffer(course7.getCourseNumber());
           summer_course1.generatSeats(30);
+          summer_course1.AssignAsTeacher(fa01);                                                                     //Lu: summer1 - fa01
           summer_course1.setLocation(413, 3,301);
           summer_course1.setTimeSchedule("Monday", 14, 16);
           CourseOffer summerg_course2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
           summerg_course2.generatSeats(30);
+          summerg_course2.AssignAsTeacher(fa02);                                                                    //Lu: summer2 - fa02
           summerg_course2.setLocation(513, 2,211);
           summerg_course2.setTimeSchedule("Friday", 19, 20);
           calendar.addCourseSchedule("2026summer", summerSchedule);
@@ -147,13 +159,16 @@ public class ConfigureTheBusiness {
           CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);
           CourseOffer winter_course1 = winterSchedule.newCourseOffer(course5.getCourseNumber());
           winter_course1.generatSeats(30);
+          winter_course1.AssignAsTeacher(fa01);                                                                     //Lu: winter1 - fa01
           winter_course1.setTimeSchedule("Saturday", 15, 16);
           winter_course1.setLocation(111, 2, 205);
           CourseOffer winter_course2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
           winter_course2.generatSeats(30);
-          winter_course2.setLocation(761, 6, 605);
+          winter_course2.AssignAsTeacher(fa02);                                                                     //Lu: winter2 - fa02
+          winter_course2.setLocation(761, 6, 605); 
           winter_course2.setTimeSchedule("Sunday", 15, 17);
           calendar.addCourseSchedule("2025winter", winterSchedule);
+         
 
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
           RegisterProfile reg1 = registerdirectory.newRegisterProfile(person001);
