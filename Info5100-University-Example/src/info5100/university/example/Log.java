@@ -27,8 +27,8 @@ import javax.swing.JPanel;
  */
 public class Log extends javax.swing.JPanel {
 Department department;
-  JPanel MainPanel;
-  StudentProfile studentprofile;
+JPanel MainPanel;
+StudentProfile studentprofile;
     /**
      * Creates new form Log
      */
@@ -140,7 +140,7 @@ Department department;
 
         if (profile instanceof FacultyProfile) {
 
-            FacultyWorkArea panel = new FacultyWorkArea(MainPanel,department);
+            FacultyWorkArea panel = new FacultyWorkArea(MainPanel,department,ua);
             MainPanel.add("FacultyWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
