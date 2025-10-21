@@ -130,5 +130,8 @@ public class FacultyProfile extends Profile{
         this.officeLocation = officeLocation;
     }
     
+    public Person getPerson() {
+        return person;
+    }
     
 }
