@@ -130,9 +130,8 @@ StudentProfile studentprofile;
         String r = ua.getRole();
         Profile profile= ua.getAssociatedPersonProfile();
         if (profile instanceof StudentProfile) {
-
-            StudentWorkArea panel = new StudentWorkArea(MainPanel,department,studentprofile);
-
+            StudentProfile sp = (StudentProfile)profile;
+            StudentWorkArea panel = new StudentWorkArea(MainPanel,department,sp);
             MainPanel.add("StudentWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
