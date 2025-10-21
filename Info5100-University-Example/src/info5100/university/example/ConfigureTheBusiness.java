@@ -97,7 +97,7 @@ public class ConfigureTheBusiness {
           
           
           CourseCatalog coursecatalog = department.getCoursecatalog();
-          Course  course1 = coursecatalog.newCourse( "Introduction to Programming", 4);
+          Course  course1 = coursecatalog.newCourse( "infor5100", 4);
           Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 5);
           Course  course3 = coursecatalog.newCourse( "Discrete Mathematics", 2);
           Course  course4 = coursecatalog.newCourse( "Computer Organization and Architecture", 2);
