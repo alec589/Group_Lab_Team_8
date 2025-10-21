@@ -11,12 +11,16 @@ package info5100.university.example.Persona.Faculty;
 public class Assignment {
     private String assignmentName;
     private int maxPoints;
-    
+    FacultyProfile facultyprofile;
     public Assignment(String name,FacultyProfile fp, int maxPoints) {
         this.assignmentName = name;
-        
+        this.facultyprofile =fp;
         this.maxPoints = maxPoints;
        
+    }
+
+    public FacultyProfile getFacultyprofile() {
+        return facultyprofile;
     }
 
    
@@ -27,5 +31,9 @@ public class Assignment {
 
     public int getMaxPoints() {
         return maxPoints;
+    }
+    public String toString() {
+
+        return assignmentName;
     }
 }
