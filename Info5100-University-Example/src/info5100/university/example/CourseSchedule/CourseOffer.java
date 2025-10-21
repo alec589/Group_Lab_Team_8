@@ -19,6 +19,7 @@ public class CourseOffer {
     Course course;
     ArrayList<Seat> seatlist;
     FacultyAssignment facultyassignment;
+    
     int buildingNumber;
     int floorNumber;
     int classroomNumber;
@@ -27,11 +28,15 @@ public class CourseOffer {
     int startTime;          
     int endTime;  
     String timeSchedule;
+    
+    boolean enrollmentStatus;
+    
     public CourseOffer(Course c) {
         course = c;
         seatlist = new ArrayList();
         
     }
+    
     public void setLocation(int buildingNumber, int floorNumber, int classroomNumber) {
         this.buildingNumber = buildingNumber;
         this.floorNumber = floorNumber;
@@ -131,20 +136,23 @@ public class CourseOffer {
     public int getCreditHours(){
         return course.getCredits();
     }
+    
     @Override
     public boolean equals(Object o) {
-    if (this == o) return true;
+        if (this == o) return true;
 
-    if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CourseOffer that = (CourseOffer) o;
+        return this.course.getName() == that.course.getName();
+    }
     
-    CourseOffer that = (CourseOffer) o;
-    return this.course.getName() == that.course.getName();
-}
     @Override
-public int hashCode() {
+    public int hashCode() {
+
+        return this.course.getCourseNumber();
+    }
     
-    return this.course.getCourseNumber();
-}
     public String toString() {
 
         return String.valueOf(course.getCourseNumber());
@@ -161,5 +169,15 @@ public int hashCode() {
     public FacultyAssignment getFacultyassignment() {
         return facultyassignment;
     }
+
+    public boolean isEnrollmentStatus() {
+        return enrollmentStatus;
+    }
+
+    public void setEnrollmentStatus(boolean enrollmentStatus) {
+        this.enrollmentStatus = enrollmentStatus;
+    }
+    
+    
     
 }

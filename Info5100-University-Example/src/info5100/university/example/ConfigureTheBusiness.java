@@ -105,6 +105,15 @@ public class ConfigureTheBusiness {
           Course  course6 = coursecatalog.newCourse( "Database Management Systems", 2);
           Course  course7 = coursecatalog.newCourse( "Principles of Computer Networks", 2);
           Course  course8 = coursecatalog.newCourse( "Software Engineering", 2);
+          course1.setDescription("Basic coding skills");
+          course2.setDescription("Efficient data handling");
+          course3.setDescription("Logic and proofs");
+          course4.setDescription("Hardware fundamentals");
+          course5.setDescription("Process management");
+          course6.setDescription("Data storage design");
+          course7.setDescription("Network fundamentals");
+          course8.setDescription("System development lifecycle");
+          
           
           Calendar calendar = department.getCalendar();
           CourseSchedule fallSchedule1 = new CourseSchedule("2025fall", coursecatalog);
@@ -113,6 +122,7 @@ public class ConfigureTheBusiness {
           fall_course1.AssignAsTeacher(fa01);                                                                       //Lu: fall1 - fa01
           fall_course1.setLocation(211, 1, 102);
           fall_course1.setTimeSchedule("Monday", 8, 10);
+          fall_course1.setEnrollmentStatus(true);
           
           Assignment assignment1 = new Assignment("Term Project", fa01, 100);
           Assignment assignment2 = new Assignment("Introduction to Java",fa01, 100);
@@ -125,6 +135,7 @@ public class ConfigureTheBusiness {
           calendar.addCourseSchedule("2025fall", fallSchedule1);
           fall_course2.setLocation(316, 1, 105);
           fall_course2.setTimeSchedule("Thursday", 7, 9);
+          fall_course2.setEnrollmentStatus(true);
           
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
           CourseOffer spring_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
@@ -132,6 +143,7 @@ public class ConfigureTheBusiness {
           spring_course3.AssignAsTeacher(fa02);                                                                     //Lu: spring3 - fa02
           spring_course3.setLocation(113, 3,309);
           spring_course3.setTimeSchedule("Friday", 10, 11);
+          spring_course3.setEnrollmentStatus(false);
           Assignment assignment3 = new Assignment("Midterm Project: System Design", fa02,100);
           spring_course3.getFacultyassignment().assignAssignment(assignment3);
           
@@ -142,6 +154,7 @@ public class ConfigureTheBusiness {
           calendar.addCourseSchedule("2026spring", springSchedule);
           spring_course2.setLocation(813, 7,732);
           spring_course2.setTimeSchedule("Friday", 13, 15);
+          spring_course2.setEnrollmentStatus(false);
           
           CourseSchedule summerSchedule = new CourseSchedule("2026summer", coursecatalog);
           CourseOffer summer_course1 = summerSchedule.newCourseOffer(course7.getCourseNumber());
@@ -149,11 +162,13 @@ public class ConfigureTheBusiness {
           summer_course1.AssignAsTeacher(fa01);                                                                     //Lu: summer1 - fa01
           summer_course1.setLocation(413, 3,301);
           summer_course1.setTimeSchedule("Monday", 14, 16);
+          summer_course1.setEnrollmentStatus(false);
           CourseOffer summerg_course2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
           summerg_course2.generatSeats(30);
           summerg_course2.AssignAsTeacher(fa02);                                                                    //Lu: summer2 - fa02
           summerg_course2.setLocation(513, 2,211);
           summerg_course2.setTimeSchedule("Friday", 19, 20);
+          summerg_course2.setEnrollmentStatus(false);
           calendar.addCourseSchedule("2026summer", summerSchedule);
           
           CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);
@@ -162,11 +177,13 @@ public class ConfigureTheBusiness {
           winter_course1.AssignAsTeacher(fa01);                                                                     //Lu: winter1 - fa01
           winter_course1.setTimeSchedule("Saturday", 15, 16);
           winter_course1.setLocation(111, 2, 205);
+          winter_course1.setEnrollmentStatus(false);
           CourseOffer winter_course2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
           winter_course2.generatSeats(30);
           winter_course2.AssignAsTeacher(fa02);                                                                     //Lu: winter2 - fa02
           winter_course2.setLocation(761, 6, 605); 
           winter_course2.setTimeSchedule("Sunday", 15, 17);
+          winter_course2.setEnrollmentStatus(false);
           calendar.addCourseSchedule("2025winter", winterSchedule);
          
 
