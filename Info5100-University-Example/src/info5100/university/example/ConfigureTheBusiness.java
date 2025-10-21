@@ -103,6 +103,8 @@ public class ConfigureTheBusiness {
           CourseOffer fall_course1 = fallSchedule1.newCourseOffer(course1.getCourseNumber());
           fall_course1.generatSeats(30);
           fall_course1.AssignAsTeacher(fa01);
+          fall_course1.setLocation(211, 1, 102);
+          fall_course1.setTimeSchedule("Monday", 8, 10);
           
           Assignment assignment1 = new Assignment("Term Project", fa01, 100);
           Assignment assignment2 = new Assignment("Introduction to Java",fa01, 100);
@@ -112,31 +114,45 @@ public class ConfigureTheBusiness {
           CourseOffer fall_course2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
           fall_course2.generatSeats(40);
           calendar.addCourseSchedule("2025fall", fallSchedule1);
+          fall_course2.setLocation(316, 1, 105);
+          fall_course2.setTimeSchedule("Thursday", 7, 9);
           
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
-          CourseOffer fall_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
-          fall_course3.generatSeats(30);
-          fall_course3.AssignAsTeacher(fa02);
+          CourseOffer spring_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
+          spring_course3.generatSeats(30);
+          spring_course3.AssignAsTeacher(fa02);
+          spring_course3.setLocation(113, 3,309);
+          spring_course3.setTimeSchedule("Friday", 10, 11);
           Assignment assignment3 = new Assignment("Midterm Project: System Design", fa02,100);
-          fall_course3.getFacultyassignment().assignAssignment(assignment3);
+          spring_course3.getFacultyassignment().assignAssignment(assignment3);
           
           
           CourseOffer spring_course2 = springSchedule.newCourseOffer(course4.getCourseNumber());
           spring_course2.generatSeats(30);
           calendar.addCourseSchedule("2026spring", springSchedule);
+          spring_course2.setLocation(813, 7,732);
+          spring_course2.setTimeSchedule("Friday", 13, 15);
           
           CourseSchedule summerSchedule = new CourseSchedule("2026summer", coursecatalog);
           CourseOffer summer_course1 = summerSchedule.newCourseOffer(course7.getCourseNumber());
           summer_course1.generatSeats(30);
+          summer_course1.setLocation(413, 3,301);
+          summer_course1.setTimeSchedule("Monday", 14, 16);
           CourseOffer summerg_course2 = summerSchedule.newCourseOffer(course8.getCourseNumber());
           summerg_course2.generatSeats(30);
+          summerg_course2.setLocation(513, 2,211);
+          summerg_course2.setTimeSchedule("Friday", 19, 20);
           calendar.addCourseSchedule("2026summer", summerSchedule);
           
           CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);
           CourseOffer winter_course1 = winterSchedule.newCourseOffer(course5.getCourseNumber());
           winter_course1.generatSeats(30);
+          winter_course1.setTimeSchedule("Saturday", 15, 16);
+          winter_course1.setLocation(111, 2, 205);
           CourseOffer winter_course2 = winterSchedule.newCourseOffer(course6.getCourseNumber());
           winter_course2.generatSeats(30);
+          winter_course2.setLocation(761, 6, 605);
+          winter_course2.setTimeSchedule("Sunday", 15, 17);
           calendar.addCourseSchedule("2025winter", winterSchedule);
 
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan

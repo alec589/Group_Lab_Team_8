@@ -19,12 +19,49 @@ public class CourseOffer {
     Course course;
     ArrayList<Seat> seatlist;
     FacultyAssignment facultyassignment;
-
+    int buildingNumber;
+    int floorNumber;
+    int classroomNumber;
+    String classroom;
+    String dayOfWeek;       
+    int startTime;          
+    int endTime;  
+    String timeSchedule;
     public CourseOffer(Course c) {
         course = c;
         seatlist = new ArrayList();
+        
     }
-     
+    public void setLocation(int buildingNumber, int floorNumber, int classroomNumber) {
+        this.buildingNumber = buildingNumber;
+        this.floorNumber = floorNumber;
+        this.classroomNumber = classroomNumber;
+        this.classroom=buildingNumber + "-" + floorNumber + "-" + classroomNumber;
+    }
+
+    public String getClassroom() {
+       if (this.classroom == null || this.classroom.isEmpty()) {
+        return "Unassigned";
+    }
+    return this.classroom; 
+       
+    }
+    public void setTimeSchedule(String dayOfWeek, int startTime, int endTime) {
+        this.dayOfWeek = dayOfWeek;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.timeSchedule= dayOfWeek + " " + startTime + "-" + endTime;
+    }
+
+    public String getTimeSchedule() {
+        if (this.timeSchedule == null || this.timeSchedule.isEmpty()) {
+        return "Unassigned";
+    }
+    
+        return timeSchedule;
+    }
+    
+    
     public void AssignAsTeacher(FacultyProfile fp) {
 
         facultyassignment = new FacultyAssignment(fp, this);
