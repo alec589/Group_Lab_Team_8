@@ -104,8 +104,8 @@ public class ConfigureTheBusiness {
           fall_course1.generatSeats(30);
           fall_course1.AssignAsTeacher(fa01);
           
-          Assignment assignment1 = new Assignment("Term Project", 100);
-          Assignment assignment2 = new Assignment("Introduction to Java", 100);
+          Assignment assignment1 = new Assignment("Term Project", fa01, 100);
+          Assignment assignment2 = new Assignment("Introduction to Java",fa01, 100);
           fall_course1.getFacultyassignment().assignAssignment(assignment1);
           fall_course1.getFacultyassignment().assignAssignment(assignment2);
           
@@ -117,7 +117,7 @@ public class ConfigureTheBusiness {
           CourseOffer fall_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
           fall_course3.generatSeats(30);
           fall_course3.AssignAsTeacher(fa02);
-          Assignment assignment3 = new Assignment("Midterm Project: System Design", 100);
+          Assignment assignment3 = new Assignment("Midterm Project: System Design", fa02,100);
           fall_course3.getFacultyassignment().assignAssignment(assignment3);
           
           

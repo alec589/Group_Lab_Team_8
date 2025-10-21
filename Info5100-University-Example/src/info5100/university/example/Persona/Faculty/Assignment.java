@@ -12,8 +12,9 @@ public class Assignment {
     private String assignmentName;
     private int maxPoints;
     
-    public Assignment(String name, int maxPoints) {
+    public Assignment(String name,FacultyProfile fp, int maxPoints) {
         this.assignmentName = name;
+        
         this.maxPoints = maxPoints;
        
     }
