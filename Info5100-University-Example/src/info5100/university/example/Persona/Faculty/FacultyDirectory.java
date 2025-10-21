@@ -63,6 +63,10 @@ public class FacultyDirectory {
     public void setDepartment(Department department) {
         this.department = department;
     }
+
+    public ArrayList<FacultyProfile> getTeacherlist() {
+        return teacherlist;
+    }
     
     
     
