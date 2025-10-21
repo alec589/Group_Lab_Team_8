@@ -6,6 +6,8 @@ package info5100.university.example.UIfaculty;
 
 
 import info5100.university.example.Department.Department;
+import info5100.university.example.Persona.UserAccount;
+import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
@@ -15,13 +17,15 @@ import javax.swing.JPanel;
 public class FacultyWorkArea extends javax.swing.JPanel {
 JPanel mainpanel;
 Department department;
+UserAccount currentUser;
     /**
      * Creates new form FacultyWorkArea
      */
-    public FacultyWorkArea(JPanel mainpanel,Department department) {
+    public FacultyWorkArea(JPanel mainpanel,Department department, UserAccount currentUser) {
         initComponents();
         this.mainpanel=mainpanel;
         this.department=department;
+        this.currentUser=currentUser;
     }
 
     /**
@@ -33,19 +37,128 @@ Department department;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        btnCourseManagment = new javax.swing.JButton();
+        btnStudentManagement = new javax.swing.JButton();
+        btnProfileManagement = new javax.swing.JButton();
+        btnPerformanceReporting = new javax.swing.JButton();
+        btnlogout = new javax.swing.JButton();
+
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel1.setText("Faculty WorkArea");
+
+        btnCourseManagment.setText("Course Management");
+        btnCourseManagment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCourseManagmentActionPerformed(evt);
+            }
+        });
+
+        btnStudentManagement.setText("Student Management");
+        btnStudentManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStudentManagementActionPerformed(evt);
+            }
+        });
+
+        btnProfileManagement.setText("Profile Management");
+        btnProfileManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProfileManagementActionPerformed(evt);
+            }
+        });
+
+        btnPerformanceReporting.setText("Performance Reporting");
+        btnPerformanceReporting.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPerformanceReportingActionPerformed(evt);
+            }
+        });
+
+        btnlogout.setText("Logout");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(289, 289, 289)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnStudentManagement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCourseManagment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(181, 181, 181)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPerformanceReporting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnProfileManagement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(320, 320, 320)
+                        .addComponent(btnlogout)))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel1)
+                .addGap(78, 78, 78)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCourseManagment)
+                    .addComponent(btnProfileManagement))
+                .addGap(116, 116, 116)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPerformanceReporting)
+                    .addComponent(btnStudentManagement))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                .addComponent(btnlogout)
+                .addGap(122, 122, 122))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCourseManagmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseManagmentActionPerformed
+        // TODO add your handling code here:
+        CourseManagementJPanel courseManagementJPanel = new CourseManagementJPanel(mainpanel, department);
+        mainpanel.add(courseManagementJPanel);
+        CardLayout layout = (CardLayout)mainpanel.getLayout();
+        layout.next(mainpanel);
+        
+    }//GEN-LAST:event_btnCourseManagmentActionPerformed
+
+    private void btnProfileManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileManagementActionPerformed
+        // TODO add your handling code here:
+        ProfileManagementJPanel profileManagementJPanel = new ProfileManagementJPanel(mainpanel, department,currentUser);
+        mainpanel.add(profileManagementJPanel);
+        CardLayout layout = (CardLayout)mainpanel.getLayout();
+        layout.next(mainpanel);
+    }//GEN-LAST:event_btnProfileManagementActionPerformed
+
+    private void btnStudentManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudentManagementActionPerformed
+        // TODO add your handling code here:
+        StudentManagementJPanel studentManagementJPanel = new StudentManagementJPanel(mainpanel, department);
+        mainpanel.add(studentManagementJPanel);
+        CardLayout layout = (CardLayout)mainpanel.getLayout();
+        layout.next(mainpanel);
+    }//GEN-LAST:event_btnStudentManagementActionPerformed
+
+    private void btnPerformanceReportingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerformanceReportingActionPerformed
+        // TODO add your handling code here:
+        PerformanceReportingJPanel performanceReportingJPanel = new PerformanceReportingJPanel(mainpanel, department);
+        mainpanel.add(performanceReportingJPanel);
+        CardLayout layout = (CardLayout)mainpanel.getLayout();
+        layout.next(mainpanel);
+    }//GEN-LAST:event_btnPerformanceReportingActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCourseManagment;
+    private javax.swing.JButton btnPerformanceReporting;
+    private javax.swing.JButton btnProfileManagement;
+    private javax.swing.JButton btnStudentManagement;
+    private javax.swing.JButton btnlogout;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
