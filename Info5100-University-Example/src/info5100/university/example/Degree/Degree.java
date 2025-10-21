@@ -49,33 +49,32 @@ public class Degree {
 
         if (validateCoreClasses(sas) == false) {
             return false;
-        }//core classes satisfied
-
-        //Do the electives check in case some taken classes are not part of the electives
-      
-        //Check for the total number of credit hours that it is above 32
-
-        else return true; //student has at least 32 credit hours per NEU requirements
+        } if(getcredishours(sas) <= 32){
+            return false;
+        }
+            return true; 
 
     }
 
     public boolean validateCoreClasses(ArrayList<SeatAssignment> sas) {
-
-        //For each core course in the core list of the degree do the following:
-        //Check if the core class at hand is in the transcrip
-        //Repeat this check for the electives as well
         for (Course c : corelist) {
-            if (!isCoreSatisfied(sas, c)) { //if selected core class not on the trascript return false
+            if (!isCoreSatisfied(sas, c)) { 
                 return false;
             }
         }
-        return true; //all core classes are on the transcript satifying core reqs
+        return true; 
 
     }
-
-    public boolean isCoreSatisfied(ArrayList<SeatAssignment> sas, Course c) {
+    public int getcredishours(ArrayList<SeatAssignment> sas){
+        int sum=0;
+        for(SeatAssignment sa : sas){
+            sum = sum+ sa.getCreditHours();
+        }
+        return sum;
+    }
+    public boolean isCoreSatisfied(ArrayList<SeatAssignment> sas, Course course1) {
         for (SeatAssignment sa : sas) {
-            if (sa.getAssociatedCourse().equals(c)) {
+            if (sa.getAssociatedCourse().equals(course1)) {
                 return true;
             }
         }
