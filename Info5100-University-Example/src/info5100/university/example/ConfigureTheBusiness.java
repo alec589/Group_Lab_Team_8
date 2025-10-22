@@ -99,7 +99,7 @@ public class ConfigureTheBusiness {
           
           
           CourseCatalog coursecatalog = department.getCoursecatalog();
-          Course  course1 = coursecatalog.newCourse( "infor5100", 4);
+          Course  course1 = coursecatalog.newCourse( "Application Engineer and Development", 4);
           Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 5);
           Course  course3 = coursecatalog.newCourse( "Discrete Mathematics", 2);
           Course  course4 = coursecatalog.newCourse( "Computer Organization and Architecture", 2);
@@ -107,7 +107,7 @@ public class ConfigureTheBusiness {
           Course  course6 = coursecatalog.newCourse( "Database Management Systems", 2);
           Course  course7 = coursecatalog.newCourse( "Principles of Computer Networks", 2);
           Course  course8 = coursecatalog.newCourse( "Software Engineering", 2);
-          course1.setDescription("Basic coding skills");
+          course1.setDescription("Software application design");
           course2.setDescription("Efficient data handling");
           course3.setDescription("Logic and proofs");
           course4.setDescription("Hardware fundamentals");
