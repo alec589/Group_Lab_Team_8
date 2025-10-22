@@ -6,6 +6,7 @@
 package info5100.university.example.CourseSchedule;
 
 import info5100.university.example.CourseCatalog.Course;
+import info5100.university.example.Persona.StudentProfile;
 
 /**
  *
@@ -17,18 +18,22 @@ public class SeatAssignment {
     boolean like; //true means like and false means not like
     CourseLoad courseload;
     Boolean pass;
+    
     public SeatAssignment(CourseLoad cl, Seat s){
         seat = s;
         courseload = cl;
         pass= false;
     }
+    
     public Boolean ispass(){
         return pass;
 
     }
+    
     public boolean getLike(){
         return like;
     }
+    
     public void assignSeatToStudent(CourseLoad cl){
         courseload = cl;
     }
@@ -37,21 +42,28 @@ public class SeatAssignment {
         return seat.getCourseCredits();
        
     }
+    
     public Seat getSeat(){
         return seat;
     }
+    
     public CourseOffer getCourseOffer(){
         
         return seat.getCourseOffer();
     }
+    
     public Course getAssociatedCourse(){
         
         return getCourseOffer().getSubjectCourse();
     }
+    
     public float GetCourseStudentScore(){
         return getCreditHours()*grade;
     }
     
-    
+    public StudentProfile getStudentProfile() {
+        if (courseload == null) return null;
+        return courseload.getTranscript().getStudentProfile();
+    }
     
 }

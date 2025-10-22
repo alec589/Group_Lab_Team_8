@@ -28,7 +28,6 @@ public class CourseSchedule {
     }
 
     public CourseOffer newCourseOffer(int  n) {
-
         Course c = coursecatalog.getCourseByNumber(n);
         if(c==null) return null;
         CourseOffer co;
@@ -36,8 +35,8 @@ public class CourseSchedule {
         schedule.add(co);
         return co;
     }
+    
     public void deleteCourseOffer(CourseOffer co) {
-
        schedule.remove(co);
     }
     
@@ -46,10 +45,18 @@ public class CourseSchedule {
     }
 
     public CourseOffer getCourseOfferByNumber(int n) {
-
         for (CourseOffer co : schedule) {
-
             if (co.getCourseNumber()==(n)) {
+                return co;
+            }
+        }
+        return null;
+    }
+    
+    public CourseOffer getCourseOfferByName(String name) {
+        if (name == null) return null;
+        for (CourseOffer co : schedule) {
+            if (co.getCourseName().equalsIgnoreCase(name)) {
                 return co;
             }
         }
@@ -59,9 +66,7 @@ public class CourseSchedule {
     public int calculateTotalRevenues() {
         int sum = 0;
         for (CourseOffer co : schedule) {
-
             sum = sum + co.getTotalCourseRevenues();
-
         }
         return sum;
     }

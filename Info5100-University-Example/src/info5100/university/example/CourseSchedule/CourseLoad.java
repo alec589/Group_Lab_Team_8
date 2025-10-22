@@ -6,6 +6,7 @@
 package info5100.university.example.CourseSchedule;
 
 import info5100.university.example.Persona.StudentProfile;
+import info5100.university.example.Persona.Transcript;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -16,11 +17,13 @@ import javax.swing.JOptionPane;
 public class CourseLoad {
     String semester;
     ArrayList<SeatAssignment> seatassignments;
+    Transcript transcript; 
     
     public CourseLoad(String s){
         seatassignments = new ArrayList();
         semester = s;
     }
+    
     public SeatAssignment newSeatAssignment(CourseOffer co,StudentProfile sp){
         
         Seat seat = co.getEmptySeat(); // seat linked to courseoffer
@@ -36,6 +39,7 @@ public class CourseLoad {
         sa.assignSeatToStudent(this);
         seatassignments.add(sa);
     }
+    
     public float getsemestercreditshours(){ //total score for a full semeter
         float creditshours = 0;
         for (SeatAssignment sa: seatassignments){
@@ -43,6 +47,7 @@ public class CourseLoad {
         }
         return creditshours;
     }
+    
     public float getSemesterScore(){ //total score for a full semeter
         float sum = 0;
         for (SeatAssignment sa: seatassignments){
@@ -54,10 +59,10 @@ public class CourseLoad {
     public ArrayList<SeatAssignment> getSeatAssignments(){
         return seatassignments;
     }
+    
     public  boolean dropCourse(SeatAssignment sa) {
         if (seatassignments.contains(sa)) {
             seatassignments.remove(sa);
-  
             Seat seat = sa.getSeat();
             seat.occupied=false;
             return true;  
@@ -65,28 +70,38 @@ public class CourseLoad {
         JOptionPane.showMessageDialog(null, "Student is not registered for this seat assignment.", "warning",JOptionPane.WARNING_MESSAGE);
            return false;
         }
+    
     public SeatAssignment getAssignmentByCourseOffer(CourseOffer co) {
-    if (co == null) return null;
+        if (co == null) return null;
+            for (SeatAssignment sa : seatassignments) {
 
-    for (SeatAssignment sa : seatassignments) {
-        
 
-        if (sa.getSeat() == null) {
-            continue; 
-        }
-        
+                if (sa.getSeat() == null) {
+                    continue; 
+                }
 
-        CourseOffer registeredCO = sa.getSeat().getCourseOffer();
-        if (registeredCO == null) {
-            continue; 
-        }
-        
 
-        if (registeredCO.equals(co)) {
-            return sa;
-        }
+                CourseOffer registeredCO = sa.getSeat().getCourseOffer();
+                if (registeredCO == null) {
+                    continue; 
+                }
+
+
+                if (registeredCO.equals(co)) {
+                    return sa;
+                }
+            }
+            return null; 
     }
-    return null; 
-}
+
+    public Transcript getTranscript() {
+        return transcript;
+    }
+
+    public void setTranscript(Transcript transcript) {
+        this.transcript = transcript;
+    }
+    
+    
 
 }

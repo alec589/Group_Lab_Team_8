@@ -69,6 +69,7 @@ public class Transcript {
         }
         return sum;
     }
+    
     //sat index means student rated their courses with likes;
     public int getStudentSatifactionIndex() {
         ArrayList<SeatAssignment> courseregistrations = getCourseList();
@@ -100,5 +101,15 @@ public class Transcript {
         return temp2;
 
     }
+
+    public StudentProfile getStudentProfile() {
+        return student;
+    }
+
+    public void setStudentProfile(StudentProfile student) {
+        this.student = student;
+    }
+    
+    
 
 }
