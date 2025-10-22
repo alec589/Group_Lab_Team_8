@@ -19,12 +19,20 @@ public class StudentProfile extends Profile{
     Person person;
     Transcript transcript;
     EmploymentHistroy employmenthistory;
+    static int counter=0;
+    int studentID;
+    String firstName;
+    String lastName;
 
     public StudentProfile(Person p) {
         super(p);
         person = p;
         transcript = new Transcript(this);
         employmenthistory = new EmploymentHistroy();
+        
+        counter++;
+        studentID = counter;
+        
     }
 
     public boolean isMatch(String id) {
@@ -55,7 +63,35 @@ public class StudentProfile extends Profile{
         return transcript.getCourseList();
 
     }
+    
     public String getrole(){
         return  "Student";
     }
+
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+    
+    
 }

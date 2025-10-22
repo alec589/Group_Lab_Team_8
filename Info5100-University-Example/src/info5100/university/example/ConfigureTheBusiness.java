@@ -6,6 +6,7 @@ package info5100.university.example;
 
 import info5100.university.example.CourseCatalog.Course;
 import info5100.university.example.CourseCatalog.CourseCatalog;
+import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
 import info5100.university.example.Department.Calendar;
@@ -21,6 +22,7 @@ import info5100.university.example.Persona.RegisterDirectory;
 import info5100.university.example.Persona.RegisterProfile;
 import info5100.university.example.Persona.StudentDirectory;
 import info5100.university.example.Persona.StudentProfile;
+import info5100.university.example.Persona.Transcript;
 import info5100.university.example.Persona.UserAccount;
 import info5100.university.example.Persona.UserAccountDirectory;
 
@@ -68,8 +70,16 @@ public class ConfigureTheBusiness {
           Person person0031 = persondirectory.newPerson("Lucy While");    //Kailu
           
           StudentDirectory studentdirectory = department.getStudentdirectory();
-          StudentProfile stu1 = studentdirectory.newStudentProfile(person003);
-          StudentProfile stu2 = studentdirectory.newStudentProfile(person005);
+          StudentProfile stu1 = studentdirectory.newStudentProfile(person001);
+          StudentProfile stu2 = studentdirectory.newStudentProfile(person002);
+          StudentProfile stu3 = studentdirectory.newStudentProfile(person003);
+          StudentProfile stu4 = studentdirectory.newStudentProfile(person004);
+          StudentProfile stu5 = studentdirectory.newStudentProfile(person005);
+          StudentProfile stu6 = studentdirectory.newStudentProfile(person006);
+          StudentProfile stu7 = studentdirectory.newStudentProfile(person007);
+          StudentProfile stu8 = studentdirectory.newStudentProfile(person008);
+          StudentProfile stu9 = studentdirectory.newStudentProfile(person009);
+          StudentProfile stu10 = studentdirectory.newStudentProfile(person0010);
           
           FacultyDirectory facultyDirectory =department.getFacultydirectory();
           FacultyProfile fa01 = facultyDirectory.newFacultyProfile(person0011);
@@ -193,6 +203,10 @@ public class ConfigureTheBusiness {
           winter_course2.setTimeSchedule("Sunday", 15, 17);
           winter_course2.setEnrollmentStatus(false);
           calendar.addCourseSchedule("2025winter", winterSchedule);
+          
+          //Lu: configure trancript and courseload, connect student
+          Transcript t01 = new Transcript(stu1);
+          CourseLoad cl01 = t01.newCourseLoad(fallSchedule1.getSemester());
          
 
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
