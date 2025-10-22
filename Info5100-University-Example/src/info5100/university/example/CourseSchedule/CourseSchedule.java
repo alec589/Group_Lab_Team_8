@@ -36,7 +36,11 @@ public class CourseSchedule {
         schedule.add(co);
         return co;
     }
+    public void deleteCourseOffer(CourseOffer co) {
 
+       schedule.remove(co);
+    }
+    
     public ArrayList<CourseOffer> getSchedule() {
         return schedule;
     }
