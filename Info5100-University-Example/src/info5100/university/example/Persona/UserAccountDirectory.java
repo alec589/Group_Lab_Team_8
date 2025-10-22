@@ -42,11 +42,11 @@ public class UserAccountDirectory {
         }
             return null; //not found after going through the whole list
          }
-    public UserAccount findUserAccount(String ID) {
+    public UserAccount findUserAccount(String name) {
 
         for (UserAccount useraccount : UserAccountDirectory) {
 
-            if (useraccount.isMatch(ID)) {
+            if (useraccount.getPersonName().equals(name)) {
                 return useraccount;
             }
         }

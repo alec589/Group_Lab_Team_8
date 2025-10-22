@@ -30,5 +30,9 @@ public class Person {
         if(getPersonId().equals(id)) return true;
         return false;
     }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
     
 }

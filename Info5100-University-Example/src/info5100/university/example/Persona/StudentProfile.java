@@ -35,6 +35,14 @@ public class StudentProfile extends Profile{
         
     }
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     public boolean isMatch(String id) {
         return person.getPersonId().equals(id);
     }
