@@ -63,8 +63,8 @@ public class SeatAssignment {
         return getCourseOffer().getSubjectCourse();
     }
     
-    public float GetCourseStudentScore(){
-        return getCreditHours()*grade;
+    public double GetCourseStudentScore(){
+        return getCreditHours()*score;
     }
     
     public StudentProfile getStudentProfile() {
@@ -91,7 +91,7 @@ public class SeatAssignment {
         this.pass = score >= 60;
     }
 
-    private String convertToLetter(double score) {
+    public String convertToLetter(double score) {
         if (score >= 93) return "A";
         else if (score >= 90) return "A-";
         else if (score >= 87) return "B+";
@@ -106,7 +106,7 @@ public class SeatAssignment {
         else return "F";
     }
     
-    private double convertToGPA(double score) {
+    public double convertToGPA(double score) {
         if (score >= 93) return 4.0;
         else if (score >= 90) return 3.7;
         else if (score >= 87) return 3.3;

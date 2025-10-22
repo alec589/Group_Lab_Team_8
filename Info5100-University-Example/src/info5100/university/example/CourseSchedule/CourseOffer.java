@@ -64,7 +64,6 @@ public class CourseOffer {
         return timeSchedule;
     }
     
-    
     public void AssignAsTeacher(FacultyProfile fp) {
 
         facultyassignment = new FacultyAssignment(fp, this);

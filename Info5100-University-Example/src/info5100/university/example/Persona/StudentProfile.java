@@ -29,7 +29,6 @@ public class StudentProfile extends Profile{
         person = p;
         transcript = new Transcript(this);
         employmenthistory = new EmploymentHistroy();
-        
         counter++;
         studentID = counter;
         

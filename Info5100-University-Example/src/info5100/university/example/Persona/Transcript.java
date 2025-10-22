@@ -59,15 +59,16 @@ public class Transcript {
 
     }
 
-    public float getStudentTotalScore() {
+    public double getStudentTotalScore() {
 
-        float sum = 0;
+        double sum = 0;
+        double credits = 0;
 
         for (CourseLoad cl : courseloadlist.values()) {
-            sum = sum + cl.getSemesterScore();
-
+            sum = sum + cl.getqualitypoints();
+            credits = credits + cl.gettotalhours();  
         }
-        return sum;
+        return sum/credits;
     }
     
     //sat index means student rated their courses with likes;
@@ -109,7 +110,5 @@ public class Transcript {
     public void setStudentProfile(StudentProfile student) {
         this.student = student;
     }
-    
-    
 
 }
