@@ -55,7 +55,17 @@ public class FacultyDirectory {
         }
             return null; //not found after going through the whole list
     }
+    
+public FacultyProfile findFacultyByName(String name) {
 
+        for (FacultyProfile sp : teacherlist) {
+
+            if (sp.isMatchName(name)) {
+                return sp;
+            }
+        }
+            return null; //not found after going through the whole list
+    }
     public Department getDepartment() {
         return department;
     }

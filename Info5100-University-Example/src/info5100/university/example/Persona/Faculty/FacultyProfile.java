@@ -69,6 +69,12 @@ public class FacultyProfile extends Profile{
         }
         return false;
     }
+    public boolean isMatchName(String name) {
+        if (this.firstName.contains(name)) {
+            return true;
+        }
+        return false;
+    }
     
     public String getrole(){
         return  "Faculty";
