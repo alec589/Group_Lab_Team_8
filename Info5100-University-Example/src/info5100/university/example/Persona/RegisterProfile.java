@@ -10,6 +10,11 @@ package info5100.university.example.Persona;
  */
 public class RegisterProfile extends Profile{
     Person person;
+    String name;
+    String phoneNumber;
+    String email;
+    String offerHour;
+    
      public RegisterProfile(Person p){
      
       super(p);
@@ -26,4 +31,41 @@ public class RegisterProfile extends Profile{
         }
         return false;
     }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getOfferHour() {
+        return offerHour;
+    }
+
+    public void setOfferHour(String offerHour) {
+        this.offerHour = offerHour;
+    }
+       
 }
