@@ -4,6 +4,7 @@
  */
 package info5100.university.example.Persona.Faculty;
 
+import info5100.university.example.CourseSchedule.CourseOffer;
 import javax.swing.ImageIcon;
 
 /**
@@ -13,26 +14,19 @@ import javax.swing.ImageIcon;
 public class Assignment {
     private String assignmentName;
     private int maxPoints;
-    FacultyProfile facultyprofile;
+    private double weight;
+    private FacultyProfile facultyProfile;
     private ImageIcon logoImage;
-    String Description;
-    Boolean completed;
-    public Assignment(String name,FacultyProfile fp, int maxPoints) {
-        this.assignmentName = name;
-        this.facultyprofile =fp;
-        this.maxPoints = maxPoints;
-        completed = false;
-    }
-
-    public void setCompleted(Boolean completed) {
-        this.completed = completed;
-    }
-
+    private String Description;
     
-    public Boolean iscompleted(){
-        return completed;
-
+    public Assignment(String name, FacultyProfile fp, int maxPoints) {
+        this.assignmentName = name;
+        this.facultyProfile =fp;
+        this.maxPoints = maxPoints;
+        
     }
+
+   
     public ImageIcon getLogoImage() {
         return logoImage;
     }
@@ -49,11 +43,18 @@ public class Assignment {
         this.Description = Description;
     }
 
-    public FacultyProfile getFacultyprofile() {
-        return facultyprofile;
+    public double getWeight() {
+        return weight;
     }
 
-   
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public FacultyProfile getFacultyProfile() {
+        return facultyProfile;
+    }
+
     
     public String getAssignmentName() {
         return assignmentName;

@@ -69,6 +69,14 @@ public class SeatAssignment {
         return courseload.getTranscript().getStudentProfile();
     }
 
+    public float getGrade() {
+        return grade;
+    }
+
+    public void setGrade(float grade) {
+        this.grade = grade;
+    }
+
     public double getScore() {
         return score;
     }
