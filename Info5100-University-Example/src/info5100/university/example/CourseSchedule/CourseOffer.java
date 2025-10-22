@@ -177,6 +177,30 @@ public class CourseOffer {
     public void setEnrollmentStatus(boolean enrollmentStatus) {
         this.enrollmentStatus = enrollmentStatus;
     }
+
+    public int getBuildingNumber() {
+        return buildingNumber;
+    }
+
+    public int getFloorNumber() {
+        return floorNumber;
+    }
+
+    public int getClassroomNumber() {
+        return classroomNumber;
+    }
+
+    public String getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public int getStartTime() {
+        return startTime;
+    }
+
+    public int getEndTime() {
+        return endTime;
+    }
     
     
     
