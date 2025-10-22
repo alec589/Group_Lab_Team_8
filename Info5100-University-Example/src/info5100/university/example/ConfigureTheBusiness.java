@@ -9,6 +9,7 @@ import info5100.university.example.CourseCatalog.CourseCatalog;
 import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
+import info5100.university.example.CourseSchedule.SeatAssignment;
 import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.AdmainProfile;
@@ -207,6 +208,42 @@ public class ConfigureTheBusiness {
           //Lu: configure trancript and courseload, connect student
           Transcript t01 = new Transcript(stu1);
           CourseLoad cl01 = t01.newCourseLoad(fallSchedule1.getSemester());
+          SeatAssignment sa01 = cl01.newSeatAssignment(fall_course1, stu1);
+          Transcript t09 = new Transcript(stu9);
+          CourseLoad cl09 = t09.newCourseLoad(fallSchedule1.getSemester());
+          SeatAssignment sa09 = cl09.newSeatAssignment(fall_course1, stu9);
+          
+          Transcript t02 = new Transcript(stu2);
+          CourseLoad cl02 = t02.newCourseLoad(fallSchedule1.getSemester());
+          SeatAssignment sa02 = cl02.newSeatAssignment(fall_course2, stu2);
+          Transcript t010 = new Transcript(stu10);
+          CourseLoad cl010 = t010.newCourseLoad(fallSchedule1.getSemester());
+          SeatAssignment sa010 = cl010.newSeatAssignment(fall_course2, stu10);
+          
+          Transcript t03 = new Transcript(stu3);
+          CourseLoad cl03 = t03.newCourseLoad(springSchedule.getSemester());
+          SeatAssignment sa03 = cl03.newSeatAssignment(spring_course3, stu3);
+          
+          Transcript t04 = new Transcript(stu4);
+          CourseLoad cl04 = t04.newCourseLoad(springSchedule.getSemester());
+          SeatAssignment sa04 = cl04.newSeatAssignment(spring_course2, stu4);
+          
+          Transcript t05 = new Transcript(stu5);
+          CourseLoad cl05 = t05.newCourseLoad(summerSchedule.getSemester());
+          SeatAssignment sa05 = cl05.newSeatAssignment(summer_course1, stu5);
+          
+          Transcript t06 = new Transcript(stu6);
+          CourseLoad cl06 = t06.newCourseLoad(summerSchedule.getSemester());
+          SeatAssignment sa06 = cl06.newSeatAssignment(summerg_course2, stu6);
+          
+          Transcript t07 = new Transcript(stu7);
+          CourseLoad cl07 = t07.newCourseLoad(winterSchedule.getSemester());
+          SeatAssignment sa07 = cl07.newSeatAssignment(winter_course1, stu7);
+          
+          Transcript t08 = new Transcript(stu8);
+          CourseLoad cl08 = t08.newCourseLoad(winterSchedule.getSemester());
+          SeatAssignment sa08 = cl08.newSeatAssignment(winter_course2, stu8);
+          
          
 
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
