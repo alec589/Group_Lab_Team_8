@@ -111,7 +111,7 @@ public class ConfigureTheBusiness {
           
           CourseCatalog coursecatalog = department.getCoursecatalog();
           Course  course1 = coursecatalog.newCourse( "Application Engineer and Development", 4);
-          Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 5);
+          Course  course2 = coursecatalog.newCourse( "Data Structures and Algorithms", 2);
           Course  course3 = coursecatalog.newCourse( "Discrete Mathematics", 2);
           Course  course4 = coursecatalog.newCourse( "Computer Organization and Architecture", 2);
           Course  course5 = coursecatalog.newCourse( "Operating Systems", 2);
@@ -145,16 +145,18 @@ public class ConfigureTheBusiness {
           
           Assignment assignment1 = new Assignment("Term Project", fa01, 100);
           Assignment assignment2 = new Assignment("Introduction to Java",fa01, 100);
+          Assignment assignment10 = new Assignment("Introduction",fa01, 100);
           fall_course1.getFacultyassignment().assignAssignment(assignment1);
           fall_course1.getFacultyassignment().assignAssignment(assignment2);
           
           CourseOffer fall_course2 = fallSchedule1.newCourseOffer(course2.getCourseNumber());
           fall_course2.generatSeats(40);
-          fall_course2.AssignAsTeacher(fa02);                                                                       //Lu: fall2 - fa02
+          fall_course2.AssignAsTeacher(fa01);                                                                       //Lu: fall2 - fa02
           calendar.addCourseSchedule("2025fall", fallSchedule1);
           fall_course2.setLocation(316, 1, 105);
           fall_course2.setTimeSchedule("Thursday", 7, 9);
           fall_course2.setEnrollmentStatus(true);
+          fall_course2.getFacultyassignment().assignAssignment(assignment10);
           
           CourseSchedule springSchedule = new CourseSchedule("2026spring", coursecatalog);
           CourseOffer spring_course3 = springSchedule.newCourseOffer(course3.getCourseNumber());
