@@ -250,6 +250,10 @@ public class ConfigureTheBusiness {
 
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
           RegisterProfile reg1 = registerdirectory.newRegisterProfile(person001);
+          reg1.setName("John Smith");
+          reg1.setPhoneNumber("6261234567");
+          reg1.setEmail("John1234@outlook.com");
+          reg1.setOfferHour("Monday/Sunday 15:00-16:00");
           
           UserAccountDirectory useraccountdirectory = department.getUseraccountdirectory();
           UserAccount   useraccount1 = useraccountdirectory.addUserAccount(stu1, "student1", "123456");
