@@ -19,7 +19,6 @@ public class CourseOffer {
     Course course;
     ArrayList<Seat> seatlist;
     FacultyAssignment facultyassignment;
-    
     int buildingNumber;
     int floorNumber;
     int classroomNumber;
@@ -28,7 +27,6 @@ public class CourseOffer {
     int startTime;          
     int endTime;  
     String timeSchedule;
-    
     boolean enrollmentStatus;
     
     public CourseOffer(Course c) {

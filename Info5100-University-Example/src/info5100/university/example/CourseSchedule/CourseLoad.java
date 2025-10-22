@@ -101,7 +101,14 @@ public class CourseLoad {
     public void setTranscript(Transcript transcript) {
         this.transcript = transcript;
     }
-    
+    public SeatAssignment findSeatAssignmentByCourseName(String courseName) {
+    for (SeatAssignment sa : this.seatassignments) {
+        if (sa.getAssociatedCourse().getName().equals(courseName)) {
+            return sa;
+        }
+    }
+    return null;
+}
     
 
 }

@@ -5,27 +5,50 @@
 package info5100.university.example.Persona.Faculty;
 
 import info5100.university.example.Persona.StudentProfile;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author luwang
  */
 public class StudentAssignment {
-    private Assignment assignment;        
-    private StudentProfile student;
-    private boolean isCompleted;
-    
+    private String submissionContent;
+    private Boolean completed;     
+    private int score;
+    private ImageIcon logoImage;
     public StudentAssignment(){
-        isCompleted = false;      // default status is not completed
+        this.completed = false;
+        this.score = 0;
+    }
+    public ImageIcon getLogoImage() {
+        return logoImage;
     }
 
-    public boolean isIsCompleted() {
-        return isCompleted;
+    public void setLogoImage(ImageIcon logoImage) {
+        this.logoImage = logoImage;
     }
 
-    public void setIsCompleted(boolean isCompleted) {
-        this.isCompleted = isCompleted;
+    public String getSubmissionContent() {
+        return submissionContent;
     }
-    
-    
+
+    public void setSubmissionContent(String submissionContent) {
+        this.submissionContent = submissionContent;
+    }
+
+    public Boolean getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }

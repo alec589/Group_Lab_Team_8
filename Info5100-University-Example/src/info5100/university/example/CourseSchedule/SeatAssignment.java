@@ -6,7 +6,9 @@
 package info5100.university.example.CourseSchedule;
 
 import info5100.university.example.CourseCatalog.Course;
+import info5100.university.example.Persona.Faculty.StudentAssignment;
 import info5100.university.example.Persona.StudentProfile;
+import java.util.HashMap;
 
 /**
  *
@@ -18,7 +20,7 @@ public class SeatAssignment {
     boolean like; //true means like and false means not like
     CourseLoad courseload;
     Boolean pass;
-    
+    private HashMap<String, StudentAssignment> assignmentRecords;
     double score; //Lu: max point is 100 or can be converted to
     String letterGrade;
     
@@ -26,6 +28,7 @@ public class SeatAssignment {
         seat = s;
         courseload = cl;
         pass= false;
+        this.assignmentRecords = new HashMap<>();
     }
     
     public Boolean ispass(){
@@ -117,4 +120,11 @@ public class SeatAssignment {
         else if (score >= 60) return 0.7;
         else return 0.0;                                // Lu: if fail, GPA=0.0
     }
+    public StudentAssignment getStudentAssignmentRecord(String assignmentName) {
+    return this.assignmentRecords.get(assignmentName);
+}
+    public HashMap<String, StudentAssignment> getAssignmentRecords() {
+        return assignmentRecords;
+    }
+    
 }

@@ -16,7 +16,6 @@ public class Assignment {
     private int maxPoints;
     private double weight;
     private FacultyProfile facultyProfile;
-    private ImageIcon logoImage;
     private String Description;
     
     public Assignment(String name, FacultyProfile fp, int maxPoints) {
@@ -25,16 +24,6 @@ public class Assignment {
         this.maxPoints = maxPoints;
         
     }
-
-   
-    public ImageIcon getLogoImage() {
-        return logoImage;
-    }
-
-    public void setLogoImage(ImageIcon logoImage) {
-        this.logoImage = logoImage;
-    }
-
     public String getDescription() {
         return Description;
     }
