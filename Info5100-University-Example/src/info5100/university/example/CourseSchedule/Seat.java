@@ -29,6 +29,16 @@ public class Seat {
         return occupied;
 
     }
+
+    public void setOccupied(Boolean occupied) {
+        this.occupied = occupied;
+    }
+
+    public void setSeatassignment(SeatAssignment seatassignment) {
+        this.seatassignment = seatassignment;
+    }
+    
+    
     
     public SeatAssignment newSeatAssignment(CourseLoad cl){
         
