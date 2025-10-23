@@ -4,6 +4,7 @@
  */
 package info5100.university.example.Persona;
 
+import info5100.university.example.CourseSchedule.SeatAssignment;
 import java.util.Date;
 
 /**
@@ -11,18 +12,24 @@ import java.util.Date;
  * @author sunzuolin
  */
 public class PaymentTransaction {
-    private Date transactionDate;
-    private double amount; 
-    private String type;   
-    private String description; 
-    private double newBalance;  
+    Date transactionDate;
+    double amount; 
+    String type;   
+    String description; 
+    double newBalance;  
+    SeatAssignment seatassignment;
 
-    public PaymentTransaction(double amount, String type, String description, double newBalance) {
+    public PaymentTransaction(double amount, String type, String description, double newBalance,SeatAssignment seatassignment) {
         this.transactionDate = new Date(); 
         this.amount = amount;
         this.type = type;   
         this.description = description;
         this.newBalance = newBalance;
+        this.seatassignment = seatassignment;
+    }
+
+    public SeatAssignment getSeatassignment() {
+        return seatassignment;
     }
 
     public Date getTransactionDate() {

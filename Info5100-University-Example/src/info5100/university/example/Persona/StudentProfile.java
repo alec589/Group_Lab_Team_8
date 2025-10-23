@@ -35,9 +35,9 @@ public class StudentProfile extends Profile{
         studentID = counter;
         
     }
-    public void updateBalance(double changeAmount, String type, String description) {
-        this.tuitionBalance = tuitionBalance + changeAmount; 
-        PaymentTransaction transaction = new PaymentTransaction(changeAmount, type, description, this.tuitionBalance);
+    public void updateBalance(double changeAmount, String type, String description ,SeatAssignment seatassignment) {
+        this.tuitionBalance = tuitionBalance + (-changeAmount); 
+        PaymentTransaction transaction = new PaymentTransaction(changeAmount, type, description, this.tuitionBalance,seatassignment);
         this.paymentHistory.add(transaction);
     }
     public ArrayList<PaymentTransaction> getPaymentHistory() {

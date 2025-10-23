@@ -93,16 +93,12 @@ public class CourseOffer {
     public void generatSeats(int n) {
 
         for (int i = 0; i < n; i++) {
-
             seatlist.add(new Seat(this, i));
-
         }
     }
 
     public Seat getEmptySeat() {
-
         for (Seat s : seatlist) {
-
             if (!s.isOccupied()) {
                 return s;
             }

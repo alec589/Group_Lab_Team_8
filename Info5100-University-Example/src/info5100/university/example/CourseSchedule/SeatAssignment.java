@@ -23,12 +23,22 @@ public class SeatAssignment {
     private HashMap<String, StudentAssignment> assignmentRecords;
     double score; //Lu: max point is 100 or can be converted to
     String letterGrade;
+    String Status;
     
     public SeatAssignment(CourseLoad cl, Seat s){
         seat = s;
         courseload = cl;
         pass= false;
         this.assignmentRecords = new HashMap<>();
+        Status = "unpaid";
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
     
     public Boolean ispass(){
