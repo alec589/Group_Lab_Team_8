@@ -59,7 +59,9 @@ public class StudentProfile extends Profile{
     public boolean isMatch(String id) {
         return person.getPersonId().equals(id);
     }
-
+    public boolean isMatchName(String name) {
+        return firstName.toLowerCase().contains(name.toLowerCase())||lastName.toLowerCase().contains(name.toLowerCase());
+    }
     public Transcript getTranscript() {
         return transcript;
     }
@@ -113,6 +115,9 @@ public class StudentProfile extends Profile{
         this.lastName = lastName;
     }
     
-    
+    @Override
+   public String toString(){
+   return String.valueOf(studentID);
+   }
     
 }
