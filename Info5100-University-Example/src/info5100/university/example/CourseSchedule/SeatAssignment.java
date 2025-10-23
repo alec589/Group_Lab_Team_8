@@ -15,7 +15,7 @@ import java.util.HashMap;
  * @author kal bugrara
  */
 public class SeatAssignment {
-    float grade; //(Letter grade mappings: A=4.0, A-=3.7, B+=3.3, B=3.0, )        //Lu: this "grade" is actually "gpa"
+    double grade; //(Letter grade mappings: A=4.0, A-=3.7, B+=3.3, B=3.0, )        //Lu: this "grade" is actually "gpa"
     Seat seat;
     boolean like; //true means like and false means not like
     CourseLoad courseload;
@@ -82,13 +82,14 @@ public class SeatAssignment {
         return courseload.getTranscript().getStudentProfile();
     }
 
-    public float getGrade() {
+    public double getGrade() {
         return grade;
     }
 
-    public void setGrade(float grade) {
+    public void setGrade(double grade) {
         this.grade = grade;
     }
+
 
     public double getScore() {
         return score;
