@@ -40,4 +40,12 @@ public class RegisterDirectory {
             return null; //not found after going through the whole list
          }
     
+    public ArrayList<RegisterProfile> getRegisterlist() {
+    return registerlist;
+}
+
+
+    public ArrayList<RegisterProfile> getRegistrarList() {
+    return getRegisterlist();
+}
 }
