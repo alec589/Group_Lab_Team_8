@@ -29,6 +29,7 @@ public class Seat {
         return occupied;
 
     }
+    
     public SeatAssignment newSeatAssignment(CourseLoad cl){
         
         seatassignment = new SeatAssignment(cl, this); //links seatassignment to seat
@@ -49,4 +50,9 @@ public class Seat {
         return seatassignment.getStudentProfile();
     }
 
+    public SeatAssignment getSeatassignment() {
+        return seatassignment;
+    }
+
+    
 }
