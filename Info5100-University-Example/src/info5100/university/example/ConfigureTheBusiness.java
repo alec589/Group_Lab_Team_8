@@ -341,7 +341,7 @@ public class ConfigureTheBusiness {
           assignment16.setWeight(0.3);
           
           // set score for past assignment
-       
+          // each student, 4 past courses, 8 past assignments
         
          StudentAssignment studentRecord011 = new StudentAssignment(assignment1);
          sa011.getAssignmentRecords().put("UI Design Project", studentRecord011); 
@@ -359,35 +359,40 @@ public class ConfigureTheBusiness {
          sa013.getAssignmentRecords().put("Logic Proofs", studentRecord015); 
          studentRecord015.setScore(56);
          StudentAssignment studentRecord016 = new StudentAssignment(assignment6);
-         sa014.getAssignmentRecords().put("Set Theory Quiz", studentRecord016); 
+         sa013.getAssignmentRecords().put("Set Theory Quiz", studentRecord016); 
          studentRecord016.setScore(89);
          StudentAssignment studentRecord017 = new StudentAssignment(assignment7);
-         sa014.getAssignmentRecords().put("CPU Simulation", studentRecord016); 
+         sa014.getAssignmentRecords().put("CPU Simulation", studentRecord017); 
          studentRecord017.setScore(79);
          StudentAssignment studentRecord018 = new StudentAssignment(assignment8);
-         sa021.getAssignmentRecords().put("Memory Mapping", studentRecord018); 
+         sa014.getAssignmentRecords().put("Memory Mapping", studentRecord018); 
          studentRecord018.setScore(69);
+         
          StudentAssignment studentRecord019 = new StudentAssignment(assignment1);
          sa021.getAssignmentRecords().put("UI Design Project", studentRecord019); 
          studentRecord019.setScore(59);
          StudentAssignment studentRecord020 = new StudentAssignment(assignment2);
-         sa022.getAssignmentRecords().put("Introduction to Java", studentRecord020); 
+         sa021.getAssignmentRecords().put("Introduction to Java", studentRecord020); 
          studentRecord020.setScore(89);
          StudentAssignment studentRecord021 = new StudentAssignment(assignment3);
          sa022.getAssignmentRecords().put("Sorting Analysis", studentRecord021); 
          studentRecord021.setScore(78);
          StudentAssignment studentRecord022 = new StudentAssignment(assignment4);
-         sa023.getAssignmentRecords().put("Graph Traversal", studentRecord022); 
+         sa022.getAssignmentRecords().put("Graph Traversal", studentRecord022); 
          studentRecord022.setScore(68);
          StudentAssignment studentRecord023 = new StudentAssignment(assignment5);
          sa023.getAssignmentRecords().put("Logic Proofs", studentRecord023); 
          studentRecord023.setScore(76);
          StudentAssignment studentRecord024 = new StudentAssignment(assignment6);
-         sa024.getAssignmentRecords().put("Set Theory Quiz", studentRecord024); 
+         sa023.getAssignmentRecords().put("Set Theory Quiz", studentRecord024); 
          studentRecord024.setScore(79);
-         StudentAssignment studentRecord025 = new StudentAssignment(assignment8);
-         sa024.getAssignmentRecords().put("Memory Mapping", studentRecord025); 
+         StudentAssignment studentRecord025 = new StudentAssignment(assignment7);
+         sa024.getAssignmentRecords().put("CPU Simulation", studentRecord025); 
          studentRecord025.setScore(56);
+         StudentAssignment studentRecord034 = new StudentAssignment(assignment8);
+         sa024.getAssignmentRecords().put("Memory Mapping", studentRecord034); 
+         studentRecord034.setScore(56);
+         
          StudentAssignment studentRecord026 = new StudentAssignment(assignment1);
          sa031.getAssignmentRecords().put("UI Design Project", studentRecord026); 
          studentRecord026.setScore(97);
@@ -413,10 +418,6 @@ public class ConfigureTheBusiness {
          sa034.getAssignmentRecords().put("Memory Mapping", studentRecord033); 
          studentRecord033.setScore(66);
          
-         
-          // each student, 4 past courses, 8 past assignments
-        
-          sa034.getStudentAssignmentRecord("Memory Mapping").setScore(78);
           
           
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan

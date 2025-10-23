@@ -6,6 +6,7 @@
 package info5100.university.example.CourseSchedule;
 
 import info5100.university.example.CourseCatalog.Course;
+import info5100.university.example.Persona.Faculty.Assignment;
 import info5100.university.example.Persona.Faculty.StudentAssignment;
 import info5100.university.example.Persona.StudentProfile;
 import java.util.HashMap;
@@ -98,7 +99,7 @@ public class SeatAssignment {
     public void setScore(double score) {
         this.score = score;
         this.letterGrade = convertToLetter(score);
-        this.grade = (float) convertToGPA(score);
+        this.grade = convertToGPA(score);
         this.pass = score >= 60;
     }
 
@@ -139,5 +140,23 @@ public class SeatAssignment {
     public HashMap<String, StudentAssignment> getAssignmentRecords() {
         return assignmentRecords;
     }
+    
+    public Double calculateFinalCourseScore() {
+        double total = 0.0;
+        double usedWeight = 0.0;
+
+        for (StudentAssignment sa : assignmentRecords.values()) {
+            Double score = sa.getScore();
+            if (score == null) continue;
+            Assignment a = sa.getAssignment();
+            double weight = a.getWeight();
+            double pct = score / a.getMaxPoints();
+            total += pct * weight;
+            usedWeight += weight;
+        }
+        if (usedWeight == 0) return null;
+        return total / usedWeight * 100.0;
+    }  
+    
     
 }

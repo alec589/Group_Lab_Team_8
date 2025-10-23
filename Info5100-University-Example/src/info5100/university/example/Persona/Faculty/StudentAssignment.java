@@ -14,7 +14,7 @@ import javax.swing.ImageIcon;
 public class StudentAssignment {
     private String submissionContent;
     private Boolean completed;     
-    private int score;
+    private double score;
     private ImageIcon logoImage;
     private Assignment assignment;
     
@@ -23,6 +23,15 @@ public class StudentAssignment {
         this.score = 0;
         this.assignment = assignment;
     }
+
+    public Assignment getAssignment() {
+        return assignment;
+    }
+
+    public void setAssignment(Assignment assignment) {
+        this.assignment = assignment;
+    }
+
     public ImageIcon getLogoImage() {
         return logoImage;
     }
@@ -47,11 +56,11 @@ public class StudentAssignment {
         this.completed = completed;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(double score) {
         this.score = score;
     }
 }
