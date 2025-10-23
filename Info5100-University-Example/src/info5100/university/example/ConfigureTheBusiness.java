@@ -16,6 +16,7 @@ import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.Assignment;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
+import info5100.university.example.Persona.Faculty.StudentAssignment;
 import info5100.university.example.Persona.Person;
 import info5100.university.example.Persona.PersonDirectory;
 import info5100.university.example.Persona.RegisterDirectory;
@@ -224,65 +225,65 @@ public class ConfigureTheBusiness {
           // transcrip1
           Transcript t01 = new Transcript(stu1);
           CourseLoad cl011 = t01.newCourseLoad(springSchedule.getSemester());
-          CourseLoad cl012 = t01.newCourseLoad(springSchedule.getSemester());
+          
           CourseLoad cl013 = t01.newCourseLoad(summerSchedule.getSemester());
-          CourseLoad cl014 = t01.newCourseLoad(summerSchedule.getSemester());
+          
           CourseLoad cl015 = t01.newCourseLoad(fallSchedule.getSemester());
-          CourseLoad cl016 = t01.newCourseLoad(fallSchedule.getSemester());
+          
           SeatAssignment sa011 = cl011.newSeatAssignment(spring_course1, stu1);
-          SeatAssignment sa012 = cl012.newSeatAssignment(spring_course2, stu1);
+          SeatAssignment sa012 = cl011.newSeatAssignment(spring_course2, stu1);
           SeatAssignment sa013 = cl013.newSeatAssignment(summer_course1, stu1);
-          SeatAssignment sa014 = cl014.newSeatAssignment(summer_course2, stu1);
+          SeatAssignment sa014 = cl013.newSeatAssignment(summer_course2, stu1);
           SeatAssignment sa015 = cl015.newSeatAssignment(fall_course1, stu1);
-          SeatAssignment sa016 = cl016.newSeatAssignment(fall_course2, stu1);
+          SeatAssignment sa016 = cl015.newSeatAssignment(fall_course2, stu1);
           cl011.setTranscript(t01);
-          cl012.setTranscript(t01);
+         
           cl013.setTranscript(t01);
-          cl014.setTranscript(t01);
+    
           cl015.setTranscript(t01);
-          cl016.setTranscript(t01);
+
           
           // transcrip2
           Transcript t02 = new Transcript(stu2);
           CourseLoad cl021 = t02.newCourseLoad(springSchedule.getSemester());
-          CourseLoad cl022 = t02.newCourseLoad(springSchedule.getSemester());
+        
           CourseLoad cl023 = t02.newCourseLoad(summerSchedule.getSemester());
-          CourseLoad cl024 = t02.newCourseLoad(summerSchedule.getSemester());
+       
           CourseLoad cl025 = t02.newCourseLoad(fallSchedule.getSemester());
-          CourseLoad cl026 = t02.newCourseLoad(fallSchedule.getSemester());
+        
           SeatAssignment sa021 = cl021.newSeatAssignment(spring_course1, stu2);
-          SeatAssignment sa022 = cl022.newSeatAssignment(spring_course2, stu2);
+          SeatAssignment sa022 = cl021.newSeatAssignment(spring_course2, stu2);
           SeatAssignment sa023 = cl023.newSeatAssignment(summer_course1, stu2);
-          SeatAssignment sa024 = cl024.newSeatAssignment(summer_course2, stu2);
+          SeatAssignment sa024 = cl023.newSeatAssignment(summer_course2, stu2);
           SeatAssignment sa025 = cl025.newSeatAssignment(fall_course1, stu2);
-          SeatAssignment sa026 = cl026.newSeatAssignment(fall_course2, stu2);
+          SeatAssignment sa026 = cl025.newSeatAssignment(fall_course2, stu2);
           cl021.setTranscript(t02);
-          cl022.setTranscript(t02);
+         
           cl023.setTranscript(t02);
-          cl024.setTranscript(t02);
+        
           cl025.setTranscript(t02);
-          cl026.setTranscript(t02);
+         
           
           // transcrip3
           Transcript t03 = new Transcript(stu3);
           CourseLoad cl031 = t03.newCourseLoad(springSchedule.getSemester());
-          CourseLoad cl032 = t03.newCourseLoad(springSchedule.getSemester());
+          
           CourseLoad cl033 = t03.newCourseLoad(summerSchedule.getSemester());
-          CourseLoad cl034 = t03.newCourseLoad(summerSchedule.getSemester());
+          
           CourseLoad cl035 = t03.newCourseLoad(fallSchedule.getSemester());
-          CourseLoad cl036 = t03.newCourseLoad(fallSchedule.getSemester());
+          
           SeatAssignment sa031 = cl031.newSeatAssignment(spring_course1, stu3);
-          SeatAssignment sa032 = cl032.newSeatAssignment(spring_course2, stu3);
+          SeatAssignment sa032 = cl031.newSeatAssignment(spring_course2, stu3);
           SeatAssignment sa033 = cl033.newSeatAssignment(summer_course1, stu3);
-          SeatAssignment sa034 = cl034.newSeatAssignment(summer_course2, stu3);
+          SeatAssignment sa034 = cl033.newSeatAssignment(summer_course2, stu3);
           SeatAssignment sa035 = cl035.newSeatAssignment(fall_course1, stu3);
-          SeatAssignment sa036 = cl036.newSeatAssignment(fall_course2, stu3);
+          SeatAssignment sa036 = cl035.newSeatAssignment(fall_course2, stu3);
           cl031.setTranscript(t03);
-          cl032.setTranscript(t03);
+    
           cl033.setTranscript(t03);
-          cl034.setTranscript(t03);
+      
           cl035.setTranscript(t03);
-          cl036.setTranscript(t03);
+         
           
          
           // configure assignment
@@ -340,32 +341,81 @@ public class ConfigureTheBusiness {
           assignment16.setWeight(0.3);
           
           // set score for past assignment
+       
+        
+         StudentAssignment studentRecord011 = new StudentAssignment(assignment1);
+         sa011.getAssignmentRecords().put("UI Design Project", studentRecord011); 
+         studentRecord011.setScore(88);
+         StudentAssignment studentRecord012 = new StudentAssignment(assignment2);
+         sa011.getAssignmentRecords().put("Introduction to Java", studentRecord012); 
+         studentRecord012.setScore(78);
+         StudentAssignment studentRecord013 = new StudentAssignment(assignment3);
+         sa012.getAssignmentRecords().put("Sorting Analysis", studentRecord013); 
+         studentRecord013.setScore(78);
+         StudentAssignment studentRecord014 = new StudentAssignment(assignment4);
+         sa012.getAssignmentRecords().put("Graph Traversal", studentRecord014); 
+         studentRecord014.setScore(65);
+         StudentAssignment studentRecord015 = new StudentAssignment(assignment5);
+         sa013.getAssignmentRecords().put("Logic Proofs", studentRecord015); 
+         studentRecord015.setScore(56);
+         StudentAssignment studentRecord016 = new StudentAssignment(assignment6);
+         sa014.getAssignmentRecords().put("Set Theory Quiz", studentRecord016); 
+         studentRecord016.setScore(89);
+         StudentAssignment studentRecord017 = new StudentAssignment(assignment7);
+         sa014.getAssignmentRecords().put("CPU Simulation", studentRecord016); 
+         studentRecord017.setScore(79);
+         StudentAssignment studentRecord018 = new StudentAssignment(assignment8);
+         sa021.getAssignmentRecords().put("Memory Mapping", studentRecord018); 
+         studentRecord018.setScore(69);
+         StudentAssignment studentRecord019 = new StudentAssignment(assignment1);
+         sa021.getAssignmentRecords().put("UI Design Project", studentRecord019); 
+         studentRecord019.setScore(59);
+         StudentAssignment studentRecord020 = new StudentAssignment(assignment2);
+         sa022.getAssignmentRecords().put("Introduction to Java", studentRecord020); 
+         studentRecord020.setScore(89);
+         StudentAssignment studentRecord021 = new StudentAssignment(assignment3);
+         sa022.getAssignmentRecords().put("Sorting Analysis", studentRecord021); 
+         studentRecord021.setScore(78);
+         StudentAssignment studentRecord022 = new StudentAssignment(assignment4);
+         sa023.getAssignmentRecords().put("Graph Traversal", studentRecord022); 
+         studentRecord022.setScore(68);
+         StudentAssignment studentRecord023 = new StudentAssignment(assignment5);
+         sa023.getAssignmentRecords().put("Logic Proofs", studentRecord023); 
+         studentRecord023.setScore(76);
+         StudentAssignment studentRecord024 = new StudentAssignment(assignment6);
+         sa024.getAssignmentRecords().put("Set Theory Quiz", studentRecord024); 
+         studentRecord024.setScore(79);
+         StudentAssignment studentRecord025 = new StudentAssignment(assignment8);
+         sa024.getAssignmentRecords().put("Memory Mapping", studentRecord025); 
+         studentRecord025.setScore(56);
+         StudentAssignment studentRecord026 = new StudentAssignment(assignment1);
+         sa031.getAssignmentRecords().put("UI Design Project", studentRecord026); 
+         studentRecord026.setScore(97);
+         StudentAssignment studentRecord027 = new StudentAssignment(assignment2);
+         sa031.getAssignmentRecords().put("Introduction to Java", studentRecord027); 
+         studentRecord027.setScore(67);
+         StudentAssignment studentRecord028 = new StudentAssignment(assignment3);
+         sa032.getAssignmentRecords().put("Sorting Analysis", studentRecord028); 
+         studentRecord028.setScore(99);
+         StudentAssignment studentRecord029 = new StudentAssignment(assignment4);
+         sa032.getAssignmentRecords().put("Graph Traversal", studentRecord029); 
+         studentRecord029.setScore(56);
+         StudentAssignment studentRecord030 = new StudentAssignment(assignment5);
+         sa033.getAssignmentRecords().put("Logic Proofs", studentRecord030); 
+         studentRecord030.setScore(97);
+         StudentAssignment studentRecord031 = new StudentAssignment(assignment6);
+         sa033.getAssignmentRecords().put("Set Theory Quiz", studentRecord031); 
+         studentRecord031.setScore(67);
+         StudentAssignment studentRecord032 = new StudentAssignment(assignment7);
+         sa034.getAssignmentRecords().put("CPU Simulation", studentRecord032); 
+         studentRecord032.setScore(56);
+         StudentAssignment studentRecord033 = new StudentAssignment(assignment8);
+         sa034.getAssignmentRecords().put("Memory Mapping", studentRecord033); 
+         studentRecord033.setScore(66);
+         
+         
           // each student, 4 past courses, 8 past assignments
-          sa011.getStudentAssignmentRecord("UI Design Project").setScore(88);
-          sa011.getStudentAssignmentRecord("Introduction to Java").setScore(78);
-          sa012.getStudentAssignmentRecord("Sorting Analysis").setScore(78);
-          sa012.getStudentAssignmentRecord("Graph Traversal").setScore(65);
-          sa013.getStudentAssignmentRecord("Logic Proofs").setScore(56);
-          sa013.getStudentAssignmentRecord("Set Theory Quiz").setScore(99);
-          sa014.getStudentAssignmentRecord("CPU Simulation").setScore(84);
-          sa014.getStudentAssignmentRecord("Memory Mapping").setScore(77);
-          
-          sa021.getStudentAssignmentRecord("UI Design Project").setScore(99);
-          sa021.getStudentAssignmentRecord("Introduction to Java").setScore(100);
-          sa022.getStudentAssignmentRecord("Sorting Analysis").setScore(67);
-          sa022.getStudentAssignmentRecord("Graph Traversal").setScore(88);
-          sa023.getStudentAssignmentRecord("Logic Proofs").setScore(95);
-          sa023.getStudentAssignmentRecord("Set Theory Quiz").setScore(64);
-          sa024.getStudentAssignmentRecord("CPU Simulation").setScore(77);
-          sa024.getStudentAssignmentRecord("Memory Mapping").setScore(78);
-          
-          sa031.getStudentAssignmentRecord("UI Design Project").setScore(77);
-          sa031.getStudentAssignmentRecord("Introduction to Java").setScore(45);
-          sa032.getStudentAssignmentRecord("Sorting Analysis").setScore(67);
-          sa032.getStudentAssignmentRecord("Graph Traversal").setScore(66);
-          sa033.getStudentAssignmentRecord("Logic Proofs").setScore(91);
-          sa033.getStudentAssignmentRecord("Set Theory Quiz").setScore(32);
-          sa034.getStudentAssignmentRecord("CPU Simulation").setScore(54);
+        
           sa034.getStudentAssignmentRecord("Memory Mapping").setScore(78);
           
           
