@@ -15,7 +15,6 @@ import java.util.ArrayList;
  * @author kal bugrara
  */
 public class CourseOffer {
-
     Course course;
     ArrayList<Seat> seatlist;
     FacultyAssignment facultyassignment;
@@ -211,7 +210,5 @@ public class CourseOffer {
     public int getEndTime() {
         return endTime;
     }
-    
-    
     
 }
