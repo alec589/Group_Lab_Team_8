@@ -91,7 +91,7 @@ public class SeatAssignment {
         this.pass = score >= 60;
     }
 
-    public String convertToLetter(double score) {
+    public static String convertToLetter(double score) {               // Lu: make sure it is static
         if (score >= 93) return "A";
         else if (score >= 90) return "A-";
         else if (score >= 87) return "B+";
@@ -106,7 +106,7 @@ public class SeatAssignment {
         else return "F";
     }
     
-    public double convertToGPA(double score) {
+    public static double convertToGPA(double score) {
         if (score >= 93) return 4.0;
         else if (score >= 90) return 3.7;
         else if (score >= 87) return 3.3;
@@ -120,9 +120,11 @@ public class SeatAssignment {
         else if (score >= 60) return 0.7;
         else return 0.0;                                // Lu: if fail, GPA=0.0
     }
+    
     public StudentAssignment getStudentAssignmentRecord(String assignmentName) {
-    return this.assignmentRecords.get(assignmentName);
-}
+        return this.assignmentRecords.get(assignmentName);
+    }
+    
     public HashMap<String, StudentAssignment> getAssignmentRecords() {
         return assignmentRecords;
     }
