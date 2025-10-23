@@ -235,10 +235,6 @@ public class ConfigureTheBusiness {
           SeatAssignment sa014 = cl014.newSeatAssignment(summer_course2, stu1);
           SeatAssignment sa015 = cl015.newSeatAssignment(fall_course1, stu1);
           SeatAssignment sa016 = cl016.newSeatAssignment(fall_course2, stu1);
-          sa011.setScore(88);
-          sa012.setScore(98);
-          sa013.setScore(56);
-          sa014.setScore(77);
           cl011.setTranscript(t01);
           cl012.setTranscript(t01);
           cl013.setTranscript(t01);
@@ -260,10 +256,6 @@ public class ConfigureTheBusiness {
           SeatAssignment sa024 = cl024.newSeatAssignment(summer_course2, stu2);
           SeatAssignment sa025 = cl025.newSeatAssignment(fall_course1, stu2);
           SeatAssignment sa026 = cl026.newSeatAssignment(fall_course2, stu2);
-          sa021.setScore(50);
-          sa022.setScore(75);
-          sa023.setScore(89);
-          sa024.setScore(99);
           cl021.setTranscript(t02);
           cl022.setTranscript(t02);
           cl023.setTranscript(t02);
@@ -285,10 +277,6 @@ public class ConfigureTheBusiness {
           SeatAssignment sa034 = cl034.newSeatAssignment(summer_course2, stu3);
           SeatAssignment sa035 = cl035.newSeatAssignment(fall_course1, stu3);
           SeatAssignment sa036 = cl036.newSeatAssignment(fall_course2, stu3);
-          sa031.setScore(67);
-          sa032.setScore(77);
-          sa033.setScore(99);
-          sa034.setScore(85);
           cl031.setTranscript(t03);
           cl032.setTranscript(t03);
           cl033.setTranscript(t03);
@@ -351,7 +339,34 @@ public class ConfigureTheBusiness {
           assignment15.setWeight(0.7);
           assignment16.setWeight(0.3);
           
+          // set score for past assignment
+          // each student, 4 past courses, 8 past assignments
+          sa011.getStudentAssignmentRecord("UI Design Project").setScore(88);
+          sa011.getStudentAssignmentRecord("Introduction to Java").setScore(78);
+          sa012.getStudentAssignmentRecord("Sorting Analysis").setScore(78);
+          sa012.getStudentAssignmentRecord("Graph Traversal").setScore(65);
+          sa013.getStudentAssignmentRecord("Logic Proofs").setScore(56);
+          sa013.getStudentAssignmentRecord("Set Theory Quiz").setScore(99);
+          sa014.getStudentAssignmentRecord("CPU Simulation").setScore(84);
+          sa014.getStudentAssignmentRecord("Memory Mapping").setScore(77);
           
+          sa021.getStudentAssignmentRecord("UI Design Project").setScore(99);
+          sa021.getStudentAssignmentRecord("Introduction to Java").setScore(100);
+          sa022.getStudentAssignmentRecord("Sorting Analysis").setScore(67);
+          sa022.getStudentAssignmentRecord("Graph Traversal").setScore(88);
+          sa023.getStudentAssignmentRecord("Logic Proofs").setScore(95);
+          sa023.getStudentAssignmentRecord("Set Theory Quiz").setScore(64);
+          sa024.getStudentAssignmentRecord("CPU Simulation").setScore(77);
+          sa024.getStudentAssignmentRecord("Memory Mapping").setScore(78);
+          
+          sa031.getStudentAssignmentRecord("UI Design Project").setScore(77);
+          sa031.getStudentAssignmentRecord("Introduction to Java").setScore(45);
+          sa032.getStudentAssignmentRecord("Sorting Analysis").setScore(67);
+          sa032.getStudentAssignmentRecord("Graph Traversal").setScore(66);
+          sa033.getStudentAssignmentRecord("Logic Proofs").setScore(91);
+          sa033.getStudentAssignmentRecord("Set Theory Quiz").setScore(32);
+          sa034.getStudentAssignmentRecord("CPU Simulation").setScore(54);
+          sa034.getStudentAssignmentRecord("Memory Mapping").setScore(78);
           
           
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
