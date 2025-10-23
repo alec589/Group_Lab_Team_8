@@ -63,4 +63,8 @@ public class StudentAssignment {
     public void setScore(double score) {
         this.score = score;
     }
+    
+    public void clearScore() { 
+        score = Double.NaN; 
+    }
 }
