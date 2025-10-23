@@ -4,6 +4,7 @@
  */
 package info5100.university.example;
 
+import info5100.university.example.College.College;
 import info5100.university.example.CourseCatalog.Course;
 import info5100.university.example.CourseCatalog.CourseCatalog;
 import info5100.university.example.CourseSchedule.CourseLoad;
@@ -33,8 +34,9 @@ import info5100.university.example.Persona.UserAccountDirectory;
  */
 public class ConfigureTheBusiness {
      static Department initialize(){
-         Department department = new Department("Information Systems");
-        
+         College college = new College("Northeastern College"); 
+         Department department = college.addDepartment("Information Systems");
+         
          PersonDirectory persondirectory = department.getPersondirectory();
           // 1-10 are students
           Person person001 = persondirectory.newPerson("John Smith");

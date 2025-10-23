@@ -23,4 +23,12 @@ public class College {
         return departments;
     }
     
+public Department addDepartment(String deptName) {
+    Department dept = new Department(deptName);
+    departments.add(dept);
+    dept.setCollege(this);
+    return dept;
+}
+  
+    
 }

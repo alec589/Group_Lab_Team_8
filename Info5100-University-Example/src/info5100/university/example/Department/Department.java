@@ -5,6 +5,7 @@
  */
 package info5100.university.example.Department;
 
+import info5100.university.example.College.College;
 import info5100.university.example.CourseCatalog.Course;
 import info5100.university.example.CourseCatalog.CourseCatalog;
 import info5100.university.example.CourseSchedule.CourseLoad;
@@ -37,6 +38,7 @@ public class Department {
     UserAccountDirectory useraccountdirectory;
     Calendar calendar;
     CourseLoad courseload;
+    College college;
     
 
     HashMap<String, CourseSchedule> mastercoursecatalog;
@@ -166,4 +168,11 @@ public class Department {
         co.assignEmptySeat(cl);
 
     }
+    public void setCollege(College college) {
+    this.college = college;
+}
+
+public College getCollege() {
+    return college;
+}
 }
