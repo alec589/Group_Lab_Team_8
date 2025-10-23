@@ -223,11 +223,9 @@ public class ConfigureTheBusiness {
           
           // configure trancript and courseload, connect student
           // transcrip1
-          Transcript t01 = new Transcript(stu1);
+          Transcript t01 = stu1.getTranscript();
           CourseLoad cl011 = t01.newCourseLoad(springSchedule.getSemester());
-          
           CourseLoad cl013 = t01.newCourseLoad(summerSchedule.getSemester());
-          
           CourseLoad cl015 = t01.newCourseLoad(fallSchedule.getSemester());
           
           SeatAssignment sa011 = cl011.newSeatAssignment(spring_course1, stu1);
@@ -237,18 +235,14 @@ public class ConfigureTheBusiness {
           SeatAssignment sa015 = cl015.newSeatAssignment(fall_course1, stu1);
           SeatAssignment sa016 = cl015.newSeatAssignment(fall_course2, stu1);
           cl011.setTranscript(t01);
-         
           cl013.setTranscript(t01);
-    
           cl015.setTranscript(t01);
 
           
           // transcrip2
-          Transcript t02 = new Transcript(stu2);
+          Transcript t02 = stu2.getTranscript();
           CourseLoad cl021 = t02.newCourseLoad(springSchedule.getSemester());
-        
           CourseLoad cl023 = t02.newCourseLoad(summerSchedule.getSemester());
-       
           CourseLoad cl025 = t02.newCourseLoad(fallSchedule.getSemester());
         
           SeatAssignment sa021 = cl021.newSeatAssignment(spring_course1, stu2);
@@ -258,18 +252,14 @@ public class ConfigureTheBusiness {
           SeatAssignment sa025 = cl025.newSeatAssignment(fall_course1, stu2);
           SeatAssignment sa026 = cl025.newSeatAssignment(fall_course2, stu2);
           cl021.setTranscript(t02);
-         
           cl023.setTranscript(t02);
-        
           cl025.setTranscript(t02);
          
           
           // transcrip3
-          Transcript t03 = new Transcript(stu3);
+          Transcript t03 = stu3.getTranscript();
           CourseLoad cl031 = t03.newCourseLoad(springSchedule.getSemester());
-          
           CourseLoad cl033 = t03.newCourseLoad(summerSchedule.getSemester());
-          
           CourseLoad cl035 = t03.newCourseLoad(fallSchedule.getSemester());
           
           SeatAssignment sa031 = cl031.newSeatAssignment(spring_course1, stu3);
@@ -279,9 +269,7 @@ public class ConfigureTheBusiness {
           SeatAssignment sa035 = cl035.newSeatAssignment(fall_course1, stu3);
           SeatAssignment sa036 = cl035.newSeatAssignment(fall_course2, stu3);
           cl031.setTranscript(t03);
-    
           cl033.setTranscript(t03);
-      
           cl035.setTranscript(t03);
          
           
