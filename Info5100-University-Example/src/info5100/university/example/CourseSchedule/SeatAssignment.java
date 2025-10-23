@@ -157,6 +157,15 @@ public class SeatAssignment {
         if (usedWeight == 0) return null;
         return total / usedWeight * 100.0;
     }  
+
+    public CourseLoad getCourseload() {
+        return courseload;
+    }
+
+    public void setCourseload(CourseLoad courseload) {
+        this.courseload = courseload;
+    }
+    
     
     
 }
