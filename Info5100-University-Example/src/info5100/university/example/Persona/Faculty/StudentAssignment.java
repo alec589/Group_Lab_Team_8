@@ -16,9 +16,12 @@ public class StudentAssignment {
     private Boolean completed;     
     private int score;
     private ImageIcon logoImage;
-    public StudentAssignment(){
+    private Assignment assignment;
+    
+    public StudentAssignment(Assignment assignment){
         this.completed = false;
         this.score = 0;
+        this.assignment = assignment;
     }
     public ImageIcon getLogoImage() {
         return logoImage;
