@@ -28,6 +28,7 @@ public class CourseOffer {
     int endTime;  
     String timeSchedule;
     boolean enrollmentStatus;
+    double tuitionFee;
     
     public CourseOffer(Course c) {
         course = c;
@@ -54,6 +55,14 @@ public class CourseOffer {
         this.startTime = startTime;
         this.endTime = endTime;
         this.timeSchedule= dayOfWeek + " " + startTime + "-" + endTime;
+    }
+
+    public double getTuitionFee() {
+        return tuitionFee;
+    }
+
+    public void setTuitionFee(double tuitionFee) {
+        this.tuitionFee = tuitionFee;
     }
 
     public String getTimeSchedule() {

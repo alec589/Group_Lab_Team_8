@@ -23,7 +23,9 @@ public class StudentProfile extends Profile{
     int studentID;
     String firstName;
     String lastName;
-
+    double tuitionBalance = 0.0;
+    ArrayList<PaymentTransaction> paymentHistory = new ArrayList<>();
+    
     public StudentProfile(Person p) {
         super(p);
         person = p;
@@ -32,6 +34,18 @@ public class StudentProfile extends Profile{
         counter++;
         studentID = counter;
         
+    }
+    public void updateBalance(double changeAmount, String type, String description) {
+        this.tuitionBalance = tuitionBalance + changeAmount; 
+        PaymentTransaction transaction = new PaymentTransaction(changeAmount, type, description, this.tuitionBalance);
+        this.paymentHistory.add(transaction);
+    }
+    public ArrayList<PaymentTransaction> getPaymentHistory() {
+        return paymentHistory;
+    }
+
+    public double getTuitionBalance() {
+        return tuitionBalance;
     }
 
     public Person getPerson() {
