@@ -202,8 +202,8 @@ public class ConfigureTheBusiness {
           fall_course2.setEnrollmentStatus(false);
           
           // 2025 winter
-          CourseSchedule winterSchedule = new CourseSchedule("2025winter", coursecatalog);
-          calendar.addCourseSchedule("2025winter", winterSchedule);
+          CourseSchedule winterSchedule = new CourseSchedule("2025Winter", coursecatalog);
+          calendar.addCourseSchedule("2025Winter", winterSchedule);
           
           CourseOffer winter_course1 = winterSchedule.newCourseOffer(course7.getCourseNumber());
           winter_course1.generatSeats(30);
@@ -239,6 +239,12 @@ public class ConfigureTheBusiness {
           sa012.setScore(98);
           sa013.setScore(56);
           sa014.setScore(77);
+          cl011.setTranscript(t01);
+          cl012.setTranscript(t01);
+          cl013.setTranscript(t01);
+          cl014.setTranscript(t01);
+          cl015.setTranscript(t01);
+          cl016.setTranscript(t01);
           
           // transcrip2
           Transcript t02 = new Transcript(stu2);
@@ -258,6 +264,12 @@ public class ConfigureTheBusiness {
           sa022.setScore(75);
           sa023.setScore(89);
           sa024.setScore(99);
+          cl021.setTranscript(t02);
+          cl022.setTranscript(t02);
+          cl023.setTranscript(t02);
+          cl024.setTranscript(t02);
+          cl025.setTranscript(t02);
+          cl026.setTranscript(t02);
           
           // transcrip3
           Transcript t03 = new Transcript(stu3);
@@ -277,6 +289,12 @@ public class ConfigureTheBusiness {
           sa032.setScore(77);
           sa033.setScore(99);
           sa034.setScore(85);
+          cl031.setTranscript(t03);
+          cl032.setTranscript(t03);
+          cl033.setTranscript(t03);
+          cl034.setTranscript(t03);
+          cl035.setTranscript(t03);
+          cl036.setTranscript(t03);
           
          
           // configure assignment
