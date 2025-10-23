@@ -82,6 +82,17 @@ public class ConfigureTheBusiness {
           StudentProfile stu9 = studentdirectory.newStudentProfile(person009);
           StudentProfile stu10 = studentdirectory.newStudentProfile(person0010);
           
+          stu1.setFirstName("John");stu1.setLastName("Smith");
+          stu2.setFirstName("Gina");stu2.setLastName(" Montana");
+          stu3.setFirstName("Adam ");stu3.setLastName("Rollen");
+          stu4.setFirstName("Amy ");stu4.setLastName("Scott");
+          stu5.setFirstName("Jim Dellon");stu5.setLastName("Dellon");
+          stu6.setFirstName("Anna ");stu6.setLastName("Shnider");
+          stu7.setFirstName("Laura ");stu7.setLastName("Brown");
+          stu8.setFirstName("Jack ");stu8.setLastName("While");
+          stu9.setFirstName("Fidelity");stu9.setLastName("Fidelity");
+          stu10.setFirstName("Mark King");stu10.setLastName(" King");
+          
           FacultyDirectory facultyDirectory =department.getFacultydirectory();
           FacultyProfile fa01 = facultyDirectory.newFacultyProfile(person0011);
           FacultyProfile fa02 = facultyDirectory.newFacultyProfile(person0012);
@@ -326,8 +337,8 @@ public class ConfigureTheBusiness {
           
           
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
-          RegisterProfile reg1 = registerdirectory.newRegisterProfile(person001);
-          reg1.setName("John Smith");
+          RegisterProfile reg1 = registerdirectory.newRegisterProfile(person0021);
+          reg1.setName("Robert Clark");
           reg1.setPhoneNumber("6261234567");
           reg1.setEmail("John1234@outlook.com");
           reg1.setOfferHour("Monday/Sunday 15:00-16:00");
