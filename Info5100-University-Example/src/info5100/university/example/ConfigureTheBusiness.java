@@ -225,6 +225,10 @@ public class ConfigureTheBusiness {
           SeatAssignment sa014 = cl014.newSeatAssignment(summer_course2, stu1);
           SeatAssignment sa015 = cl015.newSeatAssignment(fall_course1, stu1);
           SeatAssignment sa016 = cl016.newSeatAssignment(fall_course2, stu1);
+          sa011.setScore(88);
+          sa012.setScore(98);
+          sa013.setScore(56);
+          sa014.setScore(77);
           
           // transcrip2
           Transcript t02 = new Transcript(stu2);
@@ -240,6 +244,10 @@ public class ConfigureTheBusiness {
           SeatAssignment sa024 = cl024.newSeatAssignment(summer_course2, stu2);
           SeatAssignment sa025 = cl025.newSeatAssignment(fall_course1, stu2);
           SeatAssignment sa026 = cl026.newSeatAssignment(fall_course2, stu2);
+          sa021.setScore(50);
+          sa022.setScore(75);
+          sa023.setScore(89);
+          sa024.setScore(99);
           
           // transcrip3
           Transcript t03 = new Transcript(stu3);
@@ -255,6 +263,10 @@ public class ConfigureTheBusiness {
           SeatAssignment sa034 = cl034.newSeatAssignment(summer_course2, stu3);
           SeatAssignment sa035 = cl035.newSeatAssignment(fall_course1, stu3);
           SeatAssignment sa036 = cl036.newSeatAssignment(fall_course2, stu3);
+          sa031.setScore(67);
+          sa032.setScore(77);
+          sa033.setScore(99);
+          sa034.setScore(85);
           
          
           // configure assignment
@@ -311,7 +323,7 @@ public class ConfigureTheBusiness {
           assignment15.setWeight(0.7);
           assignment16.setWeight(0.3);
           
-          // set grade for past assignment
+          
           
           
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
