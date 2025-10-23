@@ -4,8 +4,7 @@
  */
 package info5100.university.example.Persona.Faculty;
 
-import info5100.university.example.CourseSchedule.CourseOffer;
-import javax.swing.ImageIcon;
+
 
 /**
  *
