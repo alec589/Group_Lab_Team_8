@@ -332,7 +332,6 @@ public class ConfigureTheBusiness {
           
           // set score for past assignment
           // each student, 4 past courses, 8 past assignments
-        
          StudentAssignment studentRecord011 = new StudentAssignment(assignment1);
          sa011.getAssignmentRecords().put("UI Design Project", studentRecord011); 
          studentRecord011.setScore(88);
@@ -408,6 +407,33 @@ public class ConfigureTheBusiness {
          sa034.getAssignmentRecords().put("Memory Mapping", studentRecord033); 
          studentRecord033.setScore(66);
          
+         // set assignment for current course
+         StudentAssignment studentRecord035 = new StudentAssignment(assignment9);
+         sa015.getAssignmentRecords().put("Process Scheduling", studentRecord035); 
+         StudentAssignment studentRecord036 = new StudentAssignment(assignment10);
+         sa015.getAssignmentRecords().put("Thread Synchronization", studentRecord036); 
+         StudentAssignment studentRecord037 = new StudentAssignment(assignment11);
+         sa016.getAssignmentRecords().put("SQL Query Lab", studentRecord037); 
+         StudentAssignment studentRecord038 = new StudentAssignment(assignment12);
+         sa016.getAssignmentRecords().put("ER Diagram Design", studentRecord038); 
+         
+         StudentAssignment studentRecord039 = new StudentAssignment(assignment9);
+         sa025.getAssignmentRecords().put("Process Scheduling", studentRecord039); 
+         StudentAssignment studentRecord040 = new StudentAssignment(assignment10);
+         sa025.getAssignmentRecords().put("Thread Synchronization", studentRecord040); 
+         StudentAssignment studentRecord041 = new StudentAssignment(assignment11);
+         sa026.getAssignmentRecords().put("SQL Query Lab", studentRecord041); 
+         StudentAssignment studentRecord042 = new StudentAssignment(assignment12);
+         sa026.getAssignmentRecords().put("ER Diagram Design", studentRecord042); 
+         
+         StudentAssignment studentRecord043 = new StudentAssignment(assignment9);
+         sa035.getAssignmentRecords().put("Process Scheduling", studentRecord043); 
+         StudentAssignment studentRecord044 = new StudentAssignment(assignment10);
+         sa035.getAssignmentRecords().put("Thread Synchronization", studentRecord044); 
+         StudentAssignment studentRecord045 = new StudentAssignment(assignment11);
+         sa036.getAssignmentRecords().put("SQL Query Lab", studentRecord045); 
+         StudentAssignment studentRecord046 = new StudentAssignment(assignment12);
+         sa036.getAssignmentRecords().put("ER Diagram Design", studentRecord046); 
           
           
           RegisterDirectory registerdirectory = department.getRegisterdirectory();//chunyan
