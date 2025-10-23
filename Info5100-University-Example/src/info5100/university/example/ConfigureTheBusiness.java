@@ -14,7 +14,6 @@ import info5100.university.example.Department.Calendar;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.Assignment;
-import info5100.university.example.Persona.Faculty.FacultyAssignment;
 import info5100.university.example.Persona.Faculty.FacultyDirectory;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Person;
@@ -69,7 +68,7 @@ public class ConfigureTheBusiness {
           Person person0028 = persondirectory.newPerson("Michael Davis");
           Person person0029 = persondirectory.newPerson("Eric Ross");
           Person person0030 = persondirectory.newPerson("Justin Foster");
-          Person person0031 = persondirectory.newPerson("Lucy While");    //Kailu
+          Person person0031 = persondirectory.newPerson("Lucy While");    
           
           StudentDirectory studentdirectory = department.getStudentdirectory();
           StudentProfile stu1 = studentdirectory.newStudentProfile(person001);
