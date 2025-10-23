@@ -78,6 +78,13 @@ public FacultyProfile findFacultyByName(String name) {
         return teacherlist;
     }
     
-    
+    public FacultyProfile findFacultyById(int id) {
+    for (FacultyProfile fp : teacherlist) {
+        if (fp.getID() == id) {
+            return fp;
+        }
+    }
+    return null;
+}
     
 }
