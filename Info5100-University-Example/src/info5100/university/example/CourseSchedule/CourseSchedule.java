@@ -56,7 +56,7 @@ public class CourseSchedule {
     public CourseOffer getCourseOfferByName(String name) {
         if (name == null) return null;
         for (CourseOffer co : schedule) {
-            if (co.getCourseName().equalsIgnoreCase(name)) {
+            if (co.getCourseName().toLowerCase().contains(name.toLowerCase())) {
                 return co;
             }
         }

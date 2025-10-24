@@ -67,4 +67,5 @@ public class StudentAssignment {
     public void clearScore() { 
         score = Double.NaN; 
     }
+    
 }
