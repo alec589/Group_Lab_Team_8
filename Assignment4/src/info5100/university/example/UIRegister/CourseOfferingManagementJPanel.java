@@ -2,31 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package info5100.university.example.UIstudent;
+package info5100.university.example.UIRegister;
 
 
 import info5100.university.example.Department.Department;
-import info5100.university.example.Persona.StudentProfile;
-
-import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
  *
- * @author sunzuolin
+ * @author lichun
  */
-public class StudentWorkArea extends javax.swing.JPanel {
+public class CourseOfferingManagementJPanel extends javax.swing.JPanel {
 JPanel mainpanel;
 Department department;
-StudentProfile studentprofile;
     /**
-     * Creates new form StudentWorkArea
+     * Creates new form CourseOfferingManagementJPanel
      */
-    public StudentWorkArea(JPanel mainpanel,Department department,StudentProfile studentprofile) {
+    public CourseOfferingManagementJPanel(JPanel mainpanel, Department department) {
         initComponents();
         this.mainpanel=mainpanel;
         this.department=department;
-        this.studentprofile=studentprofile;
     }
 
     /**
@@ -50,20 +45,7 @@ StudentProfile studentprofile;
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
