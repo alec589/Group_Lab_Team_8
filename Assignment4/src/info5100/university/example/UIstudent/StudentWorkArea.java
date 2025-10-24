@@ -111,24 +111,58 @@ public class StudentWorkArea extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        TranscriptReview panel = new TranscriptReview(mainpanel,department,studentprofile);
+        mainpanel.add("TranscriptReview", panel);
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.next(mainpanel);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CourseRegistation panel = new CourseRegistation(mainpanel,department,studentprofile);
+        mainpanel.add("CourseRegistation", panel);
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.next(mainpanel);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CourseWorkManagement panel = new CourseWorkManagement(mainpanel,department,studentprofile);
+        mainpanel.add("CourseWorkManagement", panel);
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.next(mainpanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        GraduationAudit panel = new GraduationAudit(mainpanel,department,studentprofile);
+        mainpanel.add("GraduationAudit", panel);
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.next(mainpanel);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        ProfileManagement panel = new ProfileManagement(mainpanel,department,studentprofile);
+        mainpanel.add("ProfileManagement", panel);
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.next(mainpanel);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.previous(mainpanel);
+        mainpanel.remove(this);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        FinancialManagement panel = new FinancialManagement(mainpanel,department,studentprofile);
+        mainpanel.add("FinancialManagement", panel);
+        CardLayout layout = (CardLayout) mainpanel.getLayout();
+        layout.next(mainpanel);
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
