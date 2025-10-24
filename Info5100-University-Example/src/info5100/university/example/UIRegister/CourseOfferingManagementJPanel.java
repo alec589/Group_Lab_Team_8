@@ -2,25 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UIRegistrar;
+package info5100.university.example.UIRegister;
 
-import info5100.university.example.Business;
+
+import info5100.university.example.Department.Department;
 import javax.swing.JPanel;
 
 /**
  *
- * @author sunzuolin
+ * @author lichun
  */
-public class RegistrarWorkArea extends javax.swing.JPanel {
+public class CourseOfferingManagementJPanel extends javax.swing.JPanel {
 JPanel mainpanel;
-Business business;
+Department department;
     /**
-     * Creates new form RegistrarWorkArea
+     * Creates new form CourseOfferingManagementJPanel
      */
-    public RegistrarWorkArea(JPanel mainpanel,Business business) {
+    public CourseOfferingManagementJPanel(JPanel mainpanel, Department department) {
         initComponents();
         this.mainpanel=mainpanel;
-        this.business=business;
+        this.department=department;
     }
 
     /**

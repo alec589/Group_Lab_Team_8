@@ -54,4 +54,17 @@ public class UserAccount {
         if(GetPersonID().equals(id)) return true;
         return false;
     }
+
+    public String getUserPassword() {
+        return UserPassword;
+    }
+
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    public void setUserPassword(String UserPassword) {
+        this.UserPassword = UserPassword;
+    }
+        
 }

@@ -13,6 +13,8 @@ public class Person {
     
     String ID;
     String Name;
+    String Email;
+    
     public Person (String name){
         
         
@@ -30,5 +32,19 @@ public class Person {
         if(getPersonId().equals(id)) return true;
         return false;
     }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+    
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+    
+    
     
 }

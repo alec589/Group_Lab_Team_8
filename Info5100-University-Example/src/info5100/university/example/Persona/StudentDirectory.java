@@ -41,5 +41,19 @@ public class StudentDirectory {
         }
             return null; //not found after going through the whole list
          }
+    public StudentProfile findStudentByName(String name) {
+
+        for (StudentProfile sp : studentlist) {
+
+            if (sp.isMatchName(name)) {
+                return sp;
+            }
+        }
+            return null; //not found after going through the whole list
+         }
+
+    public ArrayList<StudentProfile> getStudentlist() {
+        return studentlist;
+    }
     
 }

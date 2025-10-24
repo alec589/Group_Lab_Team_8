@@ -54,6 +54,37 @@ public class FacultyDirectory {
             }
         }
             return null; //not found after going through the whole list
-         }
+    }
+    
+public FacultyProfile findFacultyByName(String name) {
+
+        for (FacultyProfile sp : teacherlist) {
+
+            if (sp.isMatchName(name)) {
+                return sp;
+            }
+        }
+            return null; //not found after going through the whole list
+    }
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public ArrayList<FacultyProfile> getTeacherlist() {
+        return teacherlist;
+    }
+    
+    public FacultyProfile findFacultyById(int id) {
+    for (FacultyProfile fp : teacherlist) {
+        if (fp.getID() == id) {
+            return fp;
+        }
+    }
+    return null;
+}
     
 }

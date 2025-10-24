@@ -19,18 +19,49 @@ public class StudentProfile extends Profile{
     Person person;
     Transcript transcript;
     EmploymentHistroy employmenthistory;
-
+    static int counter=0;
+    int studentID;
+    String firstName;
+    String lastName;
+    double tuitionBalance = 0.0;
+    ArrayList<PaymentTransaction> paymentHistory = new ArrayList<>();
+    
     public StudentProfile(Person p) {
         super(p);
         person = p;
         transcript = new Transcript(this);
         employmenthistory = new EmploymentHistroy();
+        counter++;
+        studentID = counter;
+        
+    }
+    public void updateBalance(double changeAmount, String type, String description ,SeatAssignment seatassignment) {
+        this.tuitionBalance = tuitionBalance + (-changeAmount); 
+        PaymentTransaction transaction = new PaymentTransaction(changeAmount, type, description, this.tuitionBalance,seatassignment);
+        this.paymentHistory.add(transaction);
+    }
+    public ArrayList<PaymentTransaction> getPaymentHistory() {
+        return paymentHistory;
+    }
+
+    public double getTuitionBalance() {
+        return tuitionBalance;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public boolean isMatch(String id) {
         return person.getPersonId().equals(id);
     }
-
+    public boolean isMatchName(String name) {
+        return firstName.toLowerCase().contains(name.toLowerCase())||lastName.toLowerCase().contains(name.toLowerCase());
+    }
     public Transcript getTranscript() {
         return transcript;
     }
@@ -55,7 +86,38 @@ public class StudentProfile extends Profile{
         return transcript.getCourseList();
 
     }
+    
     public String getrole(){
         return  "Student";
     }
+
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+    @Override
+   public String toString(){
+   return String.valueOf(studentID);
+   }
+    
 }

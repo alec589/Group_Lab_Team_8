@@ -4,17 +4,20 @@
  */
 package info5100.university.example;
 
-import UIRegistrar.RegistrarWorkArea;
-import UIadmin.AdmainWorkArea;
-import UIfaculty.FacultyWorkArea;
-import UIstudent.StudentWorkArea;
+
+
+import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.AdmainProfile;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import info5100.university.example.Persona.Profile;
-import info5100.university.example.Persona.RegistrarProfile;
+import info5100.university.example.Persona.RegisterProfile;
 import info5100.university.example.Persona.StudentProfile;
 import info5100.university.example.Persona.UserAccount;
 import info5100.university.example.Persona.UserAccountDirectory;
+import info5100.university.example.UIRegister.RegisterWorkArea;
+import info5100.university.example.UIadmin.AdminWorkAreaJPanel;
+import info5100.university.example.UIfaculty.FacultyWorkArea;
+import info5100.university.example.UIstudent.StudentWorkArea;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -23,15 +26,16 @@ import javax.swing.JPanel;
  * @author sunzuolin
  */
 public class Log extends javax.swing.JPanel {
-Business business;
-  JPanel MainPanel;
+Department department;
+JPanel MainPanel;
+StudentProfile studentprofile;
     /**
      * Creates new form Log
      */
-    public Log(JPanel MainPanel, Business business) {
+    public Log(JPanel MainPanel, Department department) {
         initComponents();
         this.MainPanel = MainPanel;
-        this.business = ConfigureTheBusiness.initialize();
+        this.department = ConfigureTheBusiness.initialize();
     }
 
     /**
@@ -114,20 +118,20 @@ Business business;
         // TODO add your handling code here:
         String username = txtUserName.getText();
         String userpassword = txtPassword.getText();
-        UserAccountDirectory uad = business.getUseraccountdirectory();
+        UserAccountDirectory uad = department.getUseraccountdirectory();
         UserAccount ua = uad.AuthenticateUser(username, userpassword);
         if (ua == null) {
             return;
         }
-        AdmainWorkArea admainworkarea;
+        AdminWorkAreaJPanel adminworkareajpanel;
         StudentWorkArea studentworkarea;
         FacultyWorkArea facultyworkarea;
+        RegisterWorkArea registarworkarea;
         String r = ua.getRole();
         Profile profile= ua.getAssociatedPersonProfile();
         if (profile instanceof StudentProfile) {
-
-            StudentWorkArea panel = new StudentWorkArea(MainPanel,business);
-
+            StudentProfile sp = (StudentProfile)profile;
+            StudentWorkArea panel = new StudentWorkArea(MainPanel,department,sp);
             MainPanel.add("StudentWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
@@ -135,23 +139,23 @@ Business business;
 
         if (profile instanceof FacultyProfile) {
 
-            FacultyWorkArea panel = new FacultyWorkArea(MainPanel,business);
+            FacultyWorkArea panel = new FacultyWorkArea(MainPanel,department,ua);
             MainPanel.add("FacultyWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
         }
 
         if (profile instanceof AdmainProfile) {
-
-            AdmainWorkArea panel = new AdmainWorkArea(MainPanel,business);
+            AdmainProfile ap = (AdmainProfile)profile;
+            AdminWorkAreaJPanel panel = new AdminWorkAreaJPanel(MainPanel,department,ap);
             MainPanel.add("AdmainWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
         }
-        if (profile instanceof RegistrarProfile) {
+        if (profile instanceof RegisterProfile) {
 
-            RegistrarWorkArea panel = new RegistrarWorkArea(MainPanel,business);
-            MainPanel.add("RegistrarWorkArea", panel);
+            RegisterWorkArea panel = new RegisterWorkArea(MainPanel,department);
+            MainPanel.add("RegisterWorkArea", panel);
             CardLayout layout = (CardLayout) MainPanel.getLayout();
             layout.next(MainPanel);
         }

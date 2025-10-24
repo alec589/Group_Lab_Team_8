@@ -12,14 +12,14 @@ import java.awt.CardLayout;
  * @author sunzuolin
  */
 public class MainJFrame extends javax.swing.JFrame {
-Business business;
+Department department;
     /**
      * Creates new form MainJFrame
      */
     public MainJFrame() {
         initComponents();
-        Department myDepartment = new Department("Information Systems");
-        business = new Business("Library Management System",myDepartment);
+         department = new Department("Information Systems");
+        
         setSize(800,600);
         setResizable(false);
         setLogin();
@@ -92,7 +92,7 @@ Business business;
         });
     }
     private void setLogin() {
-        Log ls = new Log(MainPanel, business);
+        Log ls = new Log(MainPanel, department);
         MainPanel.add("LoginScreen", ls);
         CardLayout layout = (CardLayout) MainPanel.getLayout();
         layout.next(MainPanel);}

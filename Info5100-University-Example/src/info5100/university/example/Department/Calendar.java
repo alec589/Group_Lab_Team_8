@@ -7,6 +7,7 @@ package info5100.university.example.Department;
 
 import info5100.university.example.CourseSchedule.CourseSchedule;
 import java.lang.*;
+import java.util.Collection;
 import java.util.HashMap;
 /**
  *
@@ -25,7 +26,11 @@ public class Calendar {
         mastercatalog.put(semester, cs);
         
     }
+    public CourseSchedule getCourseSchedule(String semester) {
+        return mastercatalog.get(semester);
+    }
     
-    
-    
+    public Collection<String> getAllSemesterNames() {
+        return mastercatalog.keySet();
+}
 }
